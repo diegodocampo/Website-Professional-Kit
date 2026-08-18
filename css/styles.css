@@ -264,6 +264,7 @@ strong {
     outline-offset: 2px;
 }
 
+/* Botón primario (morado) */
 .btn-primary {
     background-color: var(--color-morado-principal);
     color: var(--color-marfil);
@@ -271,13 +272,14 @@ strong {
 }
 
 .btn-primary:hover {
-    background-color: var(--color-acento-intenso);
-    border-color: var(--color-acento-intenso);
+    background-color: var(--color-acento);
+    border-color: var(--color-acento);
     color: var(--color-morado-principal);
     transform: translateY(-2px);
     box-shadow: var(--shadow-md);
 }
 
+/* Botón outline (transparente con borde morado) */
 .btn-outline {
     background-color: transparent;
     color: var(--color-morado-principal);
@@ -285,12 +287,14 @@ strong {
 }
 
 .btn-outline:hover {
-    background-color: var(--color-morado-principal);
-    color: var(--color-marfil);
+    background-color: var(--color-acento);
+    border-color: var(--color-acento);
+    color: var(--color-morado-principal);
     transform: translateY(-2px);
     box-shadow: var(--shadow-md);
 }
 
+/* Botón outline claro (para fondos morados) */
 .btn-outline-light {
     background-color: transparent;
     color: var(--color-marfil);
@@ -298,11 +302,14 @@ strong {
 }
 
 .btn-outline-light:hover {
-    background-color: var(--color-marfil);
+    background-color: var(--color-acento);
+    border-color: var(--color-acento);
     color: var(--color-morado-principal);
-    border-color: var(--color-marfil);
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-md);
 }
 
+/* Botón dorado/acento (lila) */
 .btn-gold {
     background-color: var(--color-acento);
     color: var(--color-morado-principal);
@@ -311,8 +318,8 @@ strong {
 }
 
 .btn-gold:hover {
-    background-color: var(--color-acento-intenso);
-    border-color: var(--color-acento-intenso);
+    background-color: var(--color-acento);
+    border-color: var(--color-acento);
     color: var(--color-morado-principal);
     transform: translateY(-2px);
     box-shadow: var(--shadow-lg);
@@ -1182,12 +1189,4 @@ strong {
     align-items: center;
     gap: var(--spacing-md);
     padding: var(--spacing-lg) var(--spacing-xl);
-    background: none;
-    border: none;
-    cursor: pointer;
-    font-family: var(--font-sans);
-    font-size: 1rem;
-    font-weight: 500;
-    color: var(--color-morado-principal);
-    text-align: left;
-    transition: background-color
+    background
