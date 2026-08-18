@@ -1,8 +1,8 @@
 /* ============================================================
    NEUROPSIQUE - HOJA DE ESTILOS PRINCIPAL
    Paleta: Morado plum (#35204F), Morado medio (#5B3B70), 
-           Lavanda suave (#8E789F), Salvia (#71877A), 
-           Salvia claro (#B7C5BB), Marfil (#FAF8F5), 
+           Lavanda suave (#8E789F), Azul acero grisáceo (#7D95A8), 
+           Azul acero claro (#A8BCCB), Marfil (#FAF8F5), 
            Gris/lavanda claro (#F0EBF0), Carbón (#29262D)
    Tipografía: Playfair Display (títulos) + Inter (cuerpo)
    ============================================================ */
@@ -18,12 +18,12 @@
     --color-lavanda-palido: rgba(142, 120, 159, 0.15);
     --color-lavanda-hover: rgba(142, 120, 159, 0.25);
     
-    /* Colores principales - Salvia */
-    --color-salvia: #71877A;
-    --color-salvia-claro: #8FA396;
-    --color-salvia-suave: #B7C5BB;
-    --color-salvia-palido: rgba(113, 135, 122, 0.15);
-    --color-salvia-hover: rgba(113, 135, 122, 0.25);
+    /* Colores de acento - Azul acero grisáceo */
+    --color-acento: #7D95A8;
+    --color-acento-claro: #9BB1C2;
+    --color-acento-suave: #A8BCCB;
+    --color-acento-palido: rgba(125, 149, 168, 0.15);
+    --color-acento-hover: rgba(125, 149, 168, 0.25);
     
     /* Fondos */
     --color-marfil: #FAF8F5;
@@ -120,7 +120,7 @@ a {
 }
 
 a:hover {
-    color: var(--color-salvia);
+    color: var(--color-acento);
 }
 
 ul, ol {
@@ -155,7 +155,7 @@ h2::after {
     left: 0;
     width: 60%;
     height: 3px;
-    background: linear-gradient(90deg, var(--color-salvia) 0%, rgba(113, 135, 122, 0.2) 100%);
+    background: linear-gradient(90deg, var(--color-acento) 0%, rgba(125, 149, 168, 0.2) 100%);
     border-radius: 2px;
 }
 
@@ -170,7 +170,7 @@ h4 {
     font-weight: 600;
     text-transform: uppercase;
     letter-spacing: 0.08em;
-    color: var(--color-salvia);
+    color: var(--color-acento);
     margin-bottom: var(--spacing-md);
 }
 
@@ -185,7 +185,7 @@ p:last-child {
 
 em {
     font-style: italic;
-    color: var(--color-salvia);
+    color: var(--color-acento);
 }
 
 strong {
@@ -237,7 +237,7 @@ strong {
 
 .skip-link:focus {
     top: var(--spacing-md);
-    outline: 3px solid var(--color-salvia);
+    outline: 3px solid var(--color-acento);
     outline-offset: 2px;
 }
 
@@ -259,7 +259,7 @@ strong {
 }
 
 .btn:focus-visible {
-    outline: 3px solid var(--color-salvia);
+    outline: 3px solid var(--color-acento);
     outline-offset: 2px;
 }
 
@@ -270,8 +270,8 @@ strong {
 }
 
 .btn-primary:hover {
-    background-color: var(--color-salvia);
-    border-color: var(--color-salvia);
+    background-color: var(--color-acento);
+    border-color: var(--color-acento);
     color: var(--color-marfil);
     transform: translateY(-2px);
     box-shadow: var(--shadow-md);
@@ -303,15 +303,15 @@ strong {
 }
 
 .btn-gold {
-    background-color: var(--color-salvia);
+    background-color: var(--color-acento);
     color: var(--color-marfil);
-    border-color: var(--color-salvia);
+    border-color: var(--color-acento);
     font-weight: 600;
 }
 
 .btn-gold:hover {
-    background-color: var(--color-salvia-claro);
-    border-color: var(--color-salvia-claro);
+    background-color: var(--color-acento-claro);
+    border-color: var(--color-acento-claro);
     color: var(--color-marfil);
     transform: translateY(-2px);
     box-shadow: var(--shadow-lg);
@@ -373,7 +373,7 @@ strong {
 }
 
 .logo-accent {
-    color: var(--color-salvia);
+    color: var(--color-acento);
 }
 
 /* Navegación */
@@ -402,12 +402,12 @@ strong {
 
 .nav-link:hover {
     color: var(--color-morado-principal);
-    background-color: var(--color-salvia-palido);
+    background-color: var(--color-acento-palido);
 }
 
 .nav-link.active {
     color: var(--color-morado-principal);
-    background-color: var(--color-salvia-palido);
+    background-color: var(--color-acento-palido);
     font-weight: 600;
 }
 
@@ -419,7 +419,7 @@ strong {
     transform: translateX(-50%);
     width: 20px;
     height: 3px;
-    background-color: var(--color-salvia);
+    background-color: var(--color-acento);
     border-radius: 2px;
 }
 
@@ -489,9 +489,9 @@ strong {
     display: flex;
     align-items: center;
     justify-content: center;
-    background: linear-gradient(135deg, rgba(53, 32, 79, 0.03) 0%, var(--color-salvia-palido) 100%);
+    background: linear-gradient(135deg, rgba(53, 32, 79, 0.03) 0%, var(--color-acento-palido) 100%);
     border-radius: var(--border-radius-xl);
-    border: 1px solid var(--color-salvia-hover);
+    border: 1px solid var(--color-acento-hover);
 }
 
 .hero-icon {
@@ -510,7 +510,7 @@ strong {
 .shape-1 {
     width: 60px;
     height: 60px;
-    background-color: var(--color-salvia);
+    background-color: var(--color-acento);
     top: 15%;
     right: 15%;
     animation: float 8s ease-in-out infinite 1s;
@@ -546,8 +546,8 @@ strong {
     font-size: 0.85rem;
     text-transform: uppercase;
     letter-spacing: 0.12em;
-    color: var(--color-salvia);
-    background-color: var(--color-salvia-palido);
+    color: var(--color-acento);
+    background-color: var(--color-acento-palido);
     padding: 0.4rem 1.2rem;
     border-radius: 30px;
     margin-bottom: var(--spacing-lg);
@@ -586,7 +586,7 @@ strong {
     margin: 0 auto;
 }
 
-/* ========== SECTION HEADER ========== */
+/* ========== SECTION HEADER (Centrado) ========== */
 .section-header {
     text-align: center;
     margin-bottom: var(--spacing-3xl);
@@ -606,6 +606,28 @@ strong {
     color: var(--color-texto-claro);
     max-width: 550px;
     margin: var(--spacing-lg) auto 0;
+}
+
+/* ========== SECTION HEADER (Izquierdo) ========== */
+.section-header-left {
+    text-align: left;
+    margin-bottom: var(--spacing-3xl);
+}
+
+.section-header-left h2 {
+    margin-bottom: var(--spacing-sm);
+}
+
+.section-header-left h2::after {
+    left: 0;
+    transform: none;
+}
+
+.section-subtitle-left {
+    font-size: 1.05rem;
+    color: var(--color-texto-claro);
+    max-width: 550px;
+    margin-top: var(--spacing-lg);
 }
 
 /* ========== SERVICIOS (Inicio) ========== */
@@ -637,7 +659,7 @@ strong {
     left: 0;
     right: 0;
     height: 3px;
-    background: linear-gradient(90deg, var(--color-salvia), var(--color-salvia-claro));
+    background: linear-gradient(90deg, var(--color-acento), var(--color-acento-claro));
     opacity: 0;
     transition: opacity var(--transition-base);
 }
@@ -645,7 +667,7 @@ strong {
 .service-card:hover {
     transform: translateY(-8px);
     box-shadow: var(--shadow-lg);
-    border-color: var(--color-salvia-hover);
+    border-color: var(--color-acento-hover);
 }
 
 .service-card:hover::before {
@@ -654,7 +676,7 @@ strong {
 
 .service-icon {
     margin-bottom: var(--spacing-lg);
-    color: var(--color-salvia);
+    color: var(--color-acento);
     display: flex;
     justify-content: center;
 }
@@ -676,7 +698,7 @@ strong {
     gap: var(--spacing-xs);
     font-weight: 600;
     font-size: 0.9rem;
-    color: var(--color-salvia);
+    color: var(--color-acento);
     transition: gap var(--transition-fast);
 }
 
@@ -694,7 +716,7 @@ strong {
     max-width: 750px;
     margin: 0 auto;
     background-color: var(--color-blanco);
-    border-left: 4px solid var(--color-salvia);
+    border-left: 4px solid var(--color-acento);
     border-radius: 0 var(--border-radius-lg) var(--border-radius-lg) 0;
     padding: var(--spacing-2xl) var(--spacing-3xl);
     box-shadow: var(--shadow-sm);
@@ -726,7 +748,7 @@ strong {
     font-family: var(--font-sans);
     font-weight: 600;
     font-style: normal;
-    color: var(--color-salvia);
+    color: var(--color-acento);
     font-size: 0.9rem;
 }
 
@@ -753,7 +775,7 @@ strong {
     right: -20%;
     width: 400px;
     height: 400px;
-    background: radial-gradient(circle, rgba(113, 135, 122, 0.15) 0%, transparent 70%);
+    background: radial-gradient(circle, rgba(125, 149, 168, 0.15) 0%, transparent 70%);
     border-radius: var(--border-radius-full);
 }
 
@@ -808,7 +830,7 @@ strong {
 
 .footer-nav h4,
 .footer-contact h4 {
-    color: var(--color-salvia-suave);
+    color: var(--color-acento-suave);
 }
 
 .footer-nav ul {
@@ -824,7 +846,7 @@ strong {
 }
 
 .footer-nav a:hover {
-    color: var(--color-salvia-suave);
+    color: var(--color-acento-suave);
 }
 
 .footer-contact address {
@@ -842,12 +864,12 @@ strong {
 }
 
 .footer-contact a:hover {
-    color: var(--color-salvia-suave);
+    color: var(--color-acento-suave);
 }
 
 .footer-legal {
     grid-column: 1 / -1;
-    border-top: 1px solid rgba(113, 135, 122, 0.2);
+    border-top: 1px solid rgba(125, 149, 168, 0.2);
     padding-top: var(--spacing-lg);
     margin-top: var(--spacing-lg);
     display: flex;
@@ -870,7 +892,7 @@ strong {
 }
 
 .legal-links a:hover {
-    color: var(--color-salvia-suave);
+    color: var(--color-acento-suave);
 }
 
 /* ========== BIOGRAFÍA (Sobre mí) ========== */
@@ -994,7 +1016,7 @@ strong {
     top: 0;
     bottom: 0;
     width: 2px;
-    background: linear-gradient(180deg, var(--color-salvia) 0%, var(--color-lavanda-palido) 100%);
+    background: linear-gradient(180deg, var(--color-acento) 0%, var(--color-lavanda-palido) 100%);
 }
 
 .timeline-item {
@@ -1012,10 +1034,10 @@ strong {
     top: 5px;
     width: 14px;
     height: 14px;
-    background-color: var(--color-salvia);
+    background-color: var(--color-acento);
     border-radius: var(--border-radius-full);
     border: 3px solid var(--color-fondo-secundario);
-    box-shadow: 0 0 0 3px var(--color-salvia-palido);
+    box-shadow: 0 0 0 3px var(--color-acento-palido);
 }
 
 .timeline-date {
@@ -1025,7 +1047,7 @@ strong {
     font-weight: 600;
     text-transform: uppercase;
     letter-spacing: 0.08em;
-    color: var(--color-salvia);
+    color: var(--color-acento);
     margin-bottom: var(--spacing-xs);
 }
 
@@ -1048,7 +1070,7 @@ strong {
     max-width: 750px;
     margin: 0 auto;
     background-color: var(--color-marfil);
-    border-left: 4px solid var(--color-salvia);
+    border-left: 4px solid var(--color-acento);
     border-radius: 0 var(--border-radius-lg) var(--border-radius-lg) 0;
     padding: var(--spacing-2xl) var(--spacing-3xl);
     position: relative;
@@ -1079,7 +1101,7 @@ strong {
     font-family: var(--font-sans);
     font-weight: 600;
     font-style: normal;
-    color: var(--color-salvia);
+    color: var(--color-acento);
     font-size: 0.9rem;
 }
 
@@ -1114,8 +1136,8 @@ strong {
 }
 
 .filter-tab:hover {
-    background-color: var(--color-salvia-palido);
-    border-color: var(--color-salvia);
+    background-color: var(--color-acento-palido);
+    border-color: var(--color-acento);
     color: var(--color-morado-principal);
 }
 
@@ -1126,7 +1148,7 @@ strong {
 }
 
 .filter-tab:focus-visible {
-    outline: 3px solid var(--color-salvia);
+    outline: 3px solid var(--color-acento);
     outline-offset: 2px;
 }
 
@@ -1171,50 +1193,8 @@ strong {
 }
 
 .faq-question:hover {
-    background-color: var(--color-salvia-palido);
+    background-color: var(--color-acento-palido);
 }
 
 .faq-question:focus-visible {
-    outline: 3px solid var(--color-salvia);
-    outline-offset: -3px;
-}
-
-.faq-number {
-    font-family: var(--font-serif);
-    font-size: 1.1rem;
-    color: var(--color-salvia);
-    font-weight: 700;
-    min-width: 30px;
-}
-
-.faq-text {
-    flex: 1;
-}
-
-.faq-icon {
-    width: 20px;
-    height: 20px;
-    position: relative;
-    flex-shrink: 0;
-}
-
-.faq-icon::before,
-.faq-icon::after {
-    content: '';
-    position: absolute;
-    background-color: var(--color-salvia);
-    transition: transform var(--transition-base);
-    border-radius: 2px;
-}
-
-.faq-icon::before {
-    top: 50%;
-    left: 0;
-    width: 100%;
-    height: 2px;
-    transform: translateY(-50%);
-}
-
-.faq-icon::after {
-    top: 0;
-   
+    outline: 3
