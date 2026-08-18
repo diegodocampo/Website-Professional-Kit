@@ -1178,15 +1178,3 @@ strong {
     overflow: hidden;
     transition: box-shadow var(--transition-base);
 }
-
-.faq-item:hover {
-    box-shadow: var(--shadow-sm);
-}
-
-.faq-question {
-    width: 100%;
-    display: flex;
-    align-items: center;
-    gap: var(--spacing-md);
-    padding: var(--spacing-lg) var(--spacing-xl);
-    background
