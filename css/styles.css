@@ -1,8 +1,8 @@
 /* ============================================================
    NEUROPSIQUE - HOJA DE ESTILOS PRINCIPAL
    Paleta: Morado plum (#35204F), Morado medio (#5B3B70), 
-           Lavanda suave (#8E789F), Azul acero grisáceo (#7D95A8), 
-           Azul acero claro (#A8BCCB), Marfil (#FAF8F5), 
+           Lavanda suave (#8E789F), Lila lavanda claro (#C5B8D4), 
+           Lila intenso (#B8A5CC), Marfil (#FAF8F5), 
            Gris/lavanda claro (#F0EBF0), Carbón (#29262D)
    Tipografía: Playfair Display (títulos) + Inter (cuerpo)
    ============================================================ */
@@ -18,12 +18,13 @@
     --color-lavanda-palido: rgba(142, 120, 159, 0.15);
     --color-lavanda-hover: rgba(142, 120, 159, 0.25);
     
-    /* Colores de acento - Azul acero grisáceo */
-    --color-acento: #7D95A8;
-    --color-acento-claro: #9BB1C2;
-    --color-acento-suave: #A8BCCB;
-    --color-acento-palido: rgba(125, 149, 168, 0.15);
-    --color-acento-hover: rgba(125, 149, 168, 0.25);
+    /* Colores de acento - Lila lavanda claro */
+    --color-acento: #C5B8D4;
+    --color-acento-claro: #D8CDE3;
+    --color-acento-suave: #E6DFEE;
+    --color-acento-intenso: #B8A5CC;
+    --color-acento-palido: rgba(197, 184, 212, 0.25);
+    --color-acento-hover: rgba(184, 165, 204, 0.35);
     
     /* Fondos */
     --color-marfil: #FAF8F5;
@@ -120,7 +121,7 @@ a {
 }
 
 a:hover {
-    color: var(--color-acento);
+    color: var(--color-acento-intenso);
 }
 
 ul, ol {
@@ -155,7 +156,7 @@ h2::after {
     left: 0;
     width: 60%;
     height: 3px;
-    background: linear-gradient(90deg, var(--color-acento) 0%, rgba(125, 149, 168, 0.2) 100%);
+    background: linear-gradient(90deg, var(--color-acento) 0%, rgba(197, 184, 212, 0.2) 100%);
     border-radius: 2px;
 }
 
@@ -170,7 +171,7 @@ h4 {
     font-weight: 600;
     text-transform: uppercase;
     letter-spacing: 0.08em;
-    color: var(--color-acento);
+    color: var(--color-acento-intenso);
     margin-bottom: var(--spacing-md);
 }
 
@@ -185,7 +186,7 @@ p:last-child {
 
 em {
     font-style: italic;
-    color: var(--color-acento);
+    color: var(--color-acento-intenso);
 }
 
 strong {
@@ -270,9 +271,9 @@ strong {
 }
 
 .btn-primary:hover {
-    background-color: var(--color-acento);
-    border-color: var(--color-acento);
-    color: var(--color-marfil);
+    background-color: var(--color-acento-intenso);
+    border-color: var(--color-acento-intenso);
+    color: var(--color-morado-principal);
     transform: translateY(-2px);
     box-shadow: var(--shadow-md);
 }
@@ -304,15 +305,15 @@ strong {
 
 .btn-gold {
     background-color: var(--color-acento);
-    color: var(--color-marfil);
+    color: var(--color-morado-principal);
     border-color: var(--color-acento);
     font-weight: 600;
 }
 
 .btn-gold:hover {
-    background-color: var(--color-acento-claro);
-    border-color: var(--color-acento-claro);
-    color: var(--color-marfil);
+    background-color: var(--color-acento-intenso);
+    border-color: var(--color-acento-intenso);
+    color: var(--color-morado-principal);
     transform: translateY(-2px);
     box-shadow: var(--shadow-lg);
 }
@@ -373,7 +374,7 @@ strong {
 }
 
 .logo-accent {
-    color: var(--color-acento);
+    color: var(--color-acento-intenso);
 }
 
 /* Navegación */
@@ -419,7 +420,7 @@ strong {
     transform: translateX(-50%);
     width: 20px;
     height: 3px;
-    background-color: var(--color-acento);
+    background-color: var(--color-acento-intenso);
     border-radius: 2px;
 }
 
@@ -504,7 +505,7 @@ strong {
 .floating-shape {
     position: absolute;
     border-radius: var(--border-radius-full);
-    opacity: 0.1;
+    opacity: 0.15;
 }
 
 .shape-1 {
@@ -546,7 +547,7 @@ strong {
     font-size: 0.85rem;
     text-transform: uppercase;
     letter-spacing: 0.12em;
-    color: var(--color-acento);
+    color: var(--color-acento-intenso);
     background-color: var(--color-acento-palido);
     padding: 0.4rem 1.2rem;
     border-radius: 30px;
@@ -659,7 +660,7 @@ strong {
     left: 0;
     right: 0;
     height: 3px;
-    background: linear-gradient(90deg, var(--color-acento), var(--color-acento-claro));
+    background: linear-gradient(90deg, var(--color-acento), var(--color-acento-intenso));
     opacity: 0;
     transition: opacity var(--transition-base);
 }
@@ -676,7 +677,7 @@ strong {
 
 .service-icon {
     margin-bottom: var(--spacing-lg);
-    color: var(--color-acento);
+    color: var(--color-acento-intenso);
     display: flex;
     justify-content: center;
 }
@@ -698,7 +699,7 @@ strong {
     gap: var(--spacing-xs);
     font-weight: 600;
     font-size: 0.9rem;
-    color: var(--color-acento);
+    color: var(--color-acento-intenso);
     transition: gap var(--transition-fast);
 }
 
@@ -726,12 +727,12 @@ strong {
 .quote-icon {
     font-family: var(--font-serif);
     font-size: 5rem;
-    color: var(--color-lavanda-palido);
+    color: var(--color-acento-palido);
     line-height: 1;
     position: absolute;
     top: -10px;
     left: 20px;
-    opacity: 0.5;
+    opacity: 0.6;
 }
 
 .testimonial-card blockquote p {
@@ -748,7 +749,7 @@ strong {
     font-family: var(--font-sans);
     font-weight: 600;
     font-style: normal;
-    color: var(--color-acento);
+    color: var(--color-acento-intenso);
     font-size: 0.9rem;
 }
 
@@ -775,7 +776,7 @@ strong {
     right: -20%;
     width: 400px;
     height: 400px;
-    background: radial-gradient(circle, rgba(125, 149, 168, 0.15) 0%, transparent 70%);
+    background: radial-gradient(circle, rgba(197, 184, 212, 0.2) 0%, transparent 70%);
     border-radius: var(--border-radius-full);
 }
 
@@ -869,7 +870,7 @@ strong {
 
 .footer-legal {
     grid-column: 1 / -1;
-    border-top: 1px solid rgba(125, 149, 168, 0.2);
+    border-top: 1px solid rgba(197, 184, 212, 0.2);
     padding-top: var(--spacing-lg);
     margin-top: var(--spacing-lg);
     display: flex;
@@ -909,9 +910,9 @@ strong {
 }
 
 .photo-frame {
-    background: linear-gradient(135deg, var(--color-lavanda-palido) 0%, rgba(53, 32, 79, 0.05) 100%);
+    background: linear-gradient(135deg, var(--color-acento-palido) 0%, rgba(53, 32, 79, 0.05) 100%);
     border-radius: var(--border-radius-xl);
-    border: 1px solid var(--color-lavanda-hover);
+    border: 1px solid var(--color-acento-hover);
     aspect-ratio: 3/4;
     display: flex;
     align-items: center;
@@ -978,12 +979,12 @@ strong {
 
 .philosophy-card:hover {
     box-shadow: var(--shadow-md);
-    border-color: var(--color-lavanda-hover);
+    border-color: var(--color-acento-hover);
 }
 
 .philosophy-icon {
     margin-bottom: var(--spacing-lg);
-    color: var(--color-lavanda);
+    color: var(--color-acento-intenso);
     display: flex;
     justify-content: center;
 }
@@ -1016,7 +1017,7 @@ strong {
     top: 0;
     bottom: 0;
     width: 2px;
-    background: linear-gradient(180deg, var(--color-acento) 0%, var(--color-lavanda-palido) 100%);
+    background: linear-gradient(180deg, var(--color-acento) 0%, var(--color-acento-palido) 100%);
 }
 
 .timeline-item {
@@ -1047,7 +1048,7 @@ strong {
     font-weight: 600;
     text-transform: uppercase;
     letter-spacing: 0.08em;
-    color: var(--color-acento);
+    color: var(--color-acento-intenso);
     margin-bottom: var(--spacing-xs);
 }
 
@@ -1079,12 +1080,12 @@ strong {
 .values-card .quote-icon {
     font-family: var(--font-serif);
     font-size: 5rem;
-    color: var(--color-lavanda-palido);
+    color: var(--color-acento-palido);
     line-height: 1;
     position: absolute;
     top: -10px;
     left: 20px;
-    opacity: 0.5;
+    opacity: 0.6;
 }
 
 .values-card blockquote p {
@@ -1101,7 +1102,7 @@ strong {
     font-family: var(--font-sans);
     font-weight: 600;
     font-style: normal;
-    color: var(--color-acento);
+    color: var(--color-acento-intenso);
     font-size: 0.9rem;
 }
 
@@ -1189,12 +1190,4 @@ strong {
     font-weight: 500;
     color: var(--color-morado-principal);
     text-align: left;
-    transition: background-color var(--transition-fast);
-}
-
-.faq-question:hover {
-    background-color: var(--color-acento-palido);
-}
-
-.faq-question:focus-visible {
-    outline: 3
+    transition: background-color
