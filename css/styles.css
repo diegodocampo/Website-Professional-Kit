@@ -221,7 +221,7 @@ strong {
     padding-top: var(--spacing-4xl);
 }
 
-/* ========== SKIP LINK (Accesibilidad) ========== */
+/* ========== SKIP LINK ========== */
 .skip-link {
     position: absolute;
     top: -100px;
@@ -264,7 +264,6 @@ strong {
     outline-offset: 2px;
 }
 
-/* Botón primario (morado) */
 .btn-primary {
     background-color: var(--color-morado-principal);
     color: var(--color-marfil);
@@ -279,7 +278,6 @@ strong {
     box-shadow: var(--shadow-md);
 }
 
-/* Botón outline (transparente con borde morado) */
 .btn-outline {
     background-color: transparent;
     color: var(--color-morado-principal);
@@ -294,7 +292,6 @@ strong {
     box-shadow: var(--shadow-md);
 }
 
-/* Botón outline claro (para fondos morados) */
 .btn-outline-light {
     background-color: transparent;
     color: var(--color-marfil);
@@ -309,7 +306,6 @@ strong {
     box-shadow: var(--shadow-md);
 }
 
-/* Botón dorado/acento (lila) */
 .btn-gold {
     background-color: var(--color-acento);
     color: var(--color-morado-principal);
@@ -354,7 +350,6 @@ strong {
     padding-bottom: var(--spacing-md);
 }
 
-/* Logo */
 .logo {
     display: flex;
     align-items: center;
@@ -384,7 +379,6 @@ strong {
     color: var(--color-acento-intenso);
 }
 
-/* Navegación */
 .main-nav {
     display: flex;
     align-items: center;
@@ -431,7 +425,6 @@ strong {
     border-radius: 2px;
 }
 
-/* Botón hamburguesa */
 .nav-toggle {
     display: none;
     flex-direction: column;
@@ -452,7 +445,6 @@ strong {
     border-radius: 2px;
 }
 
-/* Menú abierto */
 .nav-toggle[aria-expanded="true"] .hamburger-line:nth-child(1) {
     transform: rotate(45deg) translate(5px, 5px);
 }
@@ -465,7 +457,7 @@ strong {
     transform: rotate(-45deg) translate(5px, -5px);
 }
 
-/* ========== HERO (Inicio) ========== */
+/* ========== HERO ========== */
 .hero {
     padding: var(--spacing-4xl) 0;
     background: linear-gradient(180deg, var(--color-blanco) 0%, var(--color-marfil) 100%);
@@ -574,7 +566,7 @@ strong {
     gap: var(--spacing-md);
 }
 
-/* ========== PAGE HERO (Páginas secundarias) ========== */
+/* ========== PAGE HERO ========== */
 .page-hero {
     padding: var(--spacing-3xl) 0 var(--spacing-2xl);
     text-align: center;
@@ -594,7 +586,7 @@ strong {
     margin: 0 auto;
 }
 
-/* ========== SECTION HEADER (Centrado) ========== */
+/* ========== SECTION HEADER CENTRADO ========== */
 .section-header {
     text-align: center;
     margin-bottom: var(--spacing-3xl);
@@ -616,7 +608,7 @@ strong {
     margin: var(--spacing-lg) auto 0;
 }
 
-/* ========== SECTION HEADER (Izquierdo) ========== */
+/* ========== SECTION HEADER IZQUIERDO ========== */
 .section-header-left {
     text-align: left;
     margin-bottom: var(--spacing-3xl);
@@ -638,7 +630,7 @@ strong {
     margin-top: var(--spacing-lg);
 }
 
-/* ========== SERVICIOS (Inicio) ========== */
+/* ========== SERVICIOS ========== */
 .services {
     background-color: var(--color-blanco);
 }
@@ -903,7 +895,7 @@ strong {
     color: var(--color-acento-suave);
 }
 
-/* ========== BIOGRAFÍA (Sobre mí) ========== */
+/* ========== BIOGRAFÍA ========== */
 .bio-grid {
     display: grid;
     grid-template-columns: 1fr 1.5fr;
@@ -965,7 +957,6 @@ strong {
     margin-top: var(--spacing-xl);
 }
 
-/* Filosofía */
 .philosophy {
     background-color: var(--color-blanco);
 }
@@ -1005,7 +996,6 @@ strong {
     color: var(--color-texto-claro);
 }
 
-/* Timeline (Formación) */
 .credentials {
     background-color: var(--color-fondo-secundario);
 }
@@ -1069,7 +1059,6 @@ strong {
     color: var(--color-texto-claro);
 }
 
-/* Valores (cita) */
 .values {
     background-color: var(--color-blanco);
 }
@@ -1113,7 +1102,7 @@ strong {
     font-size: 0.9rem;
 }
 
-/* ========== FAQ ========== */
+/* ========== ACORDEÓN FAQ ========== */
 .faq-filters {
     background-color: var(--color-blanco);
 }
@@ -1160,7 +1149,6 @@ strong {
     outline-offset: 2px;
 }
 
-/* Acordeón FAQ */
 .faq-accordion {
     background-color: var(--color-marfil);
 }
@@ -1191,9 +1179,15 @@ strong {
     padding: var(--spacing-lg) var(--spacing-xl);
     background: none;
     border: none;
-    cursor: pointer
+    cursor: pointer;
+    font-family: var(--font-sans);
+    font-size: 1rem;
+    font-weight: 500;
+    color: var(--color-morado-principal);
+    text-align: left;
+    transition: background-color var(--transition-fast);
+}
 
-   /* ========== ACORDEÓN FAQ (continuación) ========== */
 .faq-question:hover {
     background-color: var(--color-acento-palido);
 }
@@ -1485,7 +1479,6 @@ strong {
     flex: 1;
 }
 
-/* Etiquetas ocultas visualmente (solo para SEO) */
 .blog-card-tags {
     display: none;
 }
@@ -1799,7 +1792,6 @@ strong {
     transform: translateY(-2px);
 }
 
-/* Formulario */
 .contact-form-wrapper {
     background-color: var(--color-blanco);
     border-radius: var(--border-radius-lg);
@@ -2036,18 +2028,19 @@ strong {
     color: var(--color-texto-secundario);
 }
 
-/* ========== BANNER DE COOKIES ========== */
+/* ========== BANNER DE COOKIES (FIJO EN PANTALLA) ========== */
 .cookie-banner {
     position: fixed;
-    bottom: 0;
-    left: 0;
-    right: 0;
+    bottom: 20px;
+    left: 20px;
     z-index: 9999;
     background-color: var(--color-blanco);
     border-top: 2px solid var(--color-acento);
-    box-shadow: 0 -8px 30px rgba(53, 32, 79, 0.12);
-    transform: translateY(100%);
+    border-radius: var(--border-radius-lg);
+    box-shadow: 0 8px 30px rgba(53, 32, 79, 0.15);
+    transform: translateY(200%);
     transition: transform var(--transition-slow);
+    max-width: 500px;
 }
 
 .cookie-banner.cookie-banner-visible {
@@ -2055,9 +2048,7 @@ strong {
 }
 
 .cookie-container {
-    max-width: var(--container-max);
-    margin: 0 auto;
-    padding: var(--spacing-md) var(--container-padding);
+    padding: var(--spacing-md) var(--spacing-lg);
     display: flex;
     flex-wrap: wrap;
     align-items: center;
@@ -2065,28 +2056,27 @@ strong {
 }
 
 .cookie-content {
-    flex: 1 1 400px;
+    flex: 1 1 300px;
     display: flex;
     align-items: flex-start;
     gap: var(--spacing-md);
 }
 
 .cookie-icon {
-    font-size: 1.8rem;
+    font-size: 1.5rem;
     flex-shrink: 0;
-    margin-top: 0.2rem;
 }
 
 .cookie-text h3 {
     font-family: var(--font-sans);
-    font-size: 1rem;
+    font-size: 0.95rem;
     font-weight: 600;
     color: var(--color-morado-principal);
-    margin-bottom: 0.3rem;
+    margin-bottom: 0.2rem;
 }
 
 .cookie-text p {
-    font-size: 0.85rem;
+    font-size: 0.8rem;
     color: var(--color-texto-claro);
     line-height: 1.5;
 }
@@ -2094,13 +2084,14 @@ strong {
 .cookie-actions {
     display: flex;
     flex-wrap: wrap;
-    gap: var(--spacing-sm);
+    gap: var(--spacing-xs);
     align-items: center;
     flex-shrink: 0;
+    width: 100%;
 }
 
 .cookie-settings-link {
-    font-size: 0.85rem;
+    font-size: 0.8rem;
     color: var(--color-acento-intenso);
     text-decoration: underline;
     font-weight: 500;
@@ -2150,15 +2141,10 @@ strong {
         gap: var(--spacing-xl);
     }
     
-    .cookie-container {
-        flex-direction: column;
-        align-items: flex-start;
-    }
-    
-    .cookie-actions {
-        width: 100%;
-        justify-content: flex-start;
-        flex-wrap: wrap;
+    .cookie-banner {
+        max-width: 400px;
+        bottom: 10px;
+        left: 10px;
     }
 }
 
@@ -2211,5 +2197,12 @@ strong {
     
     .blog-grid {
         grid-template-columns: 1fr;
+    }
+    
+    .cookie-banner {
+        max-width: calc(100% - 20px);
+        bottom: 10px;
+        left: 10px;
+        right: 10px;
     }
 }
