@@ -964,6 +964,7 @@ strong {
     margin-top: var(--spacing-xl);
 }
 
+/* ========== FILOSOFÍA ========== */
 .philosophy {
     background-color: var(--color-blanco);
 }
@@ -1003,6 +1004,7 @@ strong {
     color: var(--color-texto-claro);
 }
 
+/* ========== FORMACIÓN / TIMELINE ========== */
 .credentials {
     background-color: var(--color-fondo-secundario);
 }
@@ -1066,6 +1068,7 @@ strong {
     color: var(--color-texto-claro);
 }
 
+/* ========== VALORES / CITA ========== */
 .values {
     background-color: var(--color-blanco);
 }
@@ -1190,13 +1193,7 @@ strong {
     font-family: var(--font-sans);
     font-size: 1rem;
     font-weight: 500;
-    color: var(--color-morado-principal);
-    text-align: left;
-    transition: background-color var(--transition-fast);
-}
-
-.faq-question:hover {
-    background-color: var(--color-acento-palido);
+    color: var(--color
 
 .faq-question:hover {
     background-color: var(--color-acento-palido);
@@ -1316,6 +1313,12 @@ strong {
     padding: 0.5rem 0.5rem 0.5rem 1.2rem;
     transition: all var(--transition-base);
     box-shadow: var(--shadow-sm);
+}
+
+.search-input-group:focus-within {
+    border-color: var(--color-acento-intenso);
+    box-shadow: 0 0 0 4px var(--color-acento-palido);
+    background-color: var(--color-blanco);
 }
 
 .search-icon {
@@ -2470,3 +2473,4 @@ strong {
         grid-template-columns: 1fr;
     }
 }
+               
