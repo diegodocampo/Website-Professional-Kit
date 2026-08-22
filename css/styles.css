@@ -1195,6 +1195,7 @@ strong {
     font-weight: 500;
     color: var(--color-morado-principal);
     text-align: left;
+   }
 
 .faq-question:hover {
     background-color: var(--color-acento-palido);
