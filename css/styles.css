@@ -1318,12 +1318,6 @@ strong {
     box-shadow: var(--shadow-sm);
 }
 
-.search-input-group:focus-within {
-    border-color: var(--color-acento-intenso);
-    box-shadow: 0 0 0 4px var(--color-acento-palido);
-    background-color: var(--color-blanco);
-}
-
 .search-icon {
     color: var(--color-acento-intenso);
     flex-shrink: 0;
