@@ -369,9 +369,10 @@ strong {
     opacity: 0.8;
 }
 
-.logo-icon {
-    font-size: 1.8rem;
-    line-height: 1;
+.logo-img {
+    width: 40px;
+    height: 40px;
+    object-fit: contain;
 }
 
 .logo-text {
@@ -501,11 +502,13 @@ strong {
     border: 1px solid var(--color-acento-hover);
 }
 
-.hero-icon {
-    font-size: 7rem;
+.hero-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: var(--border-radius-xl);
     position: relative;
     z-index: 2;
-    animation: float 6s ease-in-out infinite;
 }
 
 .floating-shape {
@@ -823,6 +826,12 @@ strong {
     gap: var(--spacing-2xl);
 }
 
+.footer-logo {
+    width: 35px;
+    height: 35px;
+    margin-bottom: var(--spacing-sm);
+}
+
 .footer-brand .logo-text {
     color: var(--color-marfil);
     display: block;
@@ -924,11 +933,13 @@ strong {
     align-items: center;
     justify-content: center;
     margin-bottom: var(--spacing-lg);
+    overflow: hidden;
 }
 
-.photo-icon {
-    font-size: 6rem;
-    opacity: 0.8;
+.profile-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 
 .photo-credentials {
@@ -1195,7 +1206,8 @@ strong {
     font-weight: 500;
     color: var(--color-morado-principal);
     text-align: left;
-   }
+    transition: background-color var(--transition-fast);
+}
 
 .faq-question:hover {
     background-color: var(--color-acento-palido);
@@ -2036,6 +2048,15 @@ strong {
     border-color: var(--color-acento);
     color: var(--color-morado-principal);
     transform: translateY(-2px);
+}
+
+/* Contacto simplificado (sin formulario) */
+.contact-info-only {
+    max-width: 500px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-lg);
 }
 
 .contact-form-wrapper {
