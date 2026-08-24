@@ -370,8 +370,8 @@ strong {
 }
 
 .logo-img {
-    width: 30px;
-    height: 30px;
+    width: 35px;
+    height: 35px;
     object-fit: contain;
     flex-shrink: 0;
 }
@@ -828,8 +828,8 @@ strong {
 }
 
 .footer-logo {
-    width: 26px;
-    height: 26px;
+    width: 35px;
+    height: 35px;
     margin-bottom: var(--spacing-sm);
     flex-shrink: 0;
 }
