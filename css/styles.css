@@ -370,9 +370,10 @@ strong {
 }
 
 .logo-img {
-    width: 40px;
-    height: 40px;
+    width: 30px;
+    height: 30px;
     object-fit: contain;
+    flex-shrink: 0;
 }
 
 .logo-text {
@@ -827,9 +828,10 @@ strong {
 }
 
 .footer-logo {
-    width: 35px;
-    height: 35px;
+    width: 26px;
+    height: 26px;
     margin-bottom: var(--spacing-sm);
+    flex-shrink: 0;
 }
 
 .footer-brand .logo-text {
