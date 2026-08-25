@@ -151,6 +151,21 @@
             min-height: 1.2em;
         }
 
+        .login-warning {
+            background-color: var(--color-warning-fondo);
+            color: #7a5a0a;
+            border-radius: var(--border-radius-sm);
+            padding: 0.7rem 0.9rem;
+            font-size: 0.8rem;
+            margin-top: 1rem;
+            text-align: left;
+            display: none;
+        }
+
+        .login-warning.visible {
+            display: block;
+        }
+
         /* ========== BOTONES ========== */
         .btn {
             display: inline-flex;
@@ -809,6 +824,7 @@
             <p style="margin-top: 1rem; font-size: 0.8rem; color: var(--color-texto-claro);">
                 Contraseña por defecto: <strong>neuropsique2026</strong>
             </p>
+            <p id="storage-warning" class="login-warning" aria-live="polite"></p>
         </div>
     </div>
 
@@ -967,10 +983,6 @@
     <!-- ========== TOAST CONTAINER ========== -->
     <div id="toast-container" class="toast-container"></div>
 
-    <!-- El JavaScript continúa en la siguiente respuesta -->
-</body>
-</html>
-
     <script>
         /* ============================================================
            PANEL DE ADMINISTRACIÓN - NEUROPSYCARE
@@ -983,11 +995,13 @@
         let currentTags = [];
         let editingId = null;
         let deleteTargetId = null;
+        let storageAvailable = true;
 
         // Elementos DOM
         const loginOverlay = document.getElementById('login-overlay');
         const loginForm = document.getElementById('login-form');
         const loginError = document.getElementById('login-error');
+        const storageWarning = document.getElementById('storage-warning');
         const adminPanel = document.getElementById('admin-panel');
         const modalOverlay = document.getElementById('modal-overlay');
         const publicationForm = document.getElementById('publication-form');
@@ -1000,11 +1014,52 @@
         const excerptTextarea = document.getElementById('pub-excerpt');
         const excerptCount = document.getElementById('excerpt-count');
 
+        // ========== ALMACENAMIENTO SEGURO ==========
+        // Envuelve localStorage/sessionStorage en try/catch: en algunos
+        // navegadores (sobre todo abriendo el archivo con doble clic, es
+        // decir protocolo file://, o con el bloqueo de cookies de terceros
+        // activado) el acceso lanza una excepción y detiene todo el script.
+        // Con esto, si falla, se avisa en pantalla en vez de quedarse "muerto".
+        function safeGetItem(storage, key) {
+            try {
+                return storage.getItem(key);
+            } catch (err) {
+                storageAvailable = false;
+                return null;
+            }
+        }
+
+        function safeSetItem(storage, key, value) {
+            try {
+                storage.setItem(key, value);
+                return true;
+            } catch (err) {
+                storageAvailable = false;
+                return false;
+            }
+        }
+
+        function safeRemoveItem(storage, key) {
+            try {
+                storage.removeItem(key);
+            } catch (err) {
+                storageAvailable = false;
+            }
+        }
+
+        function showStorageWarningIfNeeded() {
+            if (!storageAvailable) {
+                storageWarning.textContent = '⚠️ Este navegador está bloqueando el almacenamiento local en esta página (frecuente si abres el archivo directamente en vez de a través de tu web). El panel podría no guardar los cambios o no dejarte entrar. Prueba a abrirlo desde la URL publicada en GitHub Pages.';
+                storageWarning.classList.add('visible');
+            }
+        }
+
         // ========== INICIALIZACIÓN ==========
         function init() {
             loadPublications();
+            showStorageWarningIfNeeded();
             
-            const isLogged = sessionStorage.getItem(SESSION_KEY) === 'true';
+            const isLogged = safeGetItem(sessionStorage, SESSION_KEY) === 'true';
             if (isLogged) {
                 showAdminPanel();
             }
@@ -1050,16 +1105,19 @@
             const password = document.getElementById('login-password').value;
             
             if (password === ADMIN_PASSWORD) {
-                sessionStorage.setItem(SESSION_KEY, 'true');
+                const saved = safeSetItem(sessionStorage, SESSION_KEY, 'true');
                 showAdminPanel();
                 loginError.textContent = '';
+                if (!saved) {
+                    showStorageWarningIfNeeded();
+                }
             } else {
                 loginError.textContent = 'Contraseña incorrecta. Inténtalo de nuevo.';
             }
         }
 
         function handleLogout() {
-            sessionStorage.removeItem(SESSION_KEY);
+            safeRemoveItem(sessionStorage, SESSION_KEY);
             loginOverlay.classList.remove('hidden');
             adminPanel.classList.remove('visible');
             document.getElementById('login-password').value = '';
@@ -1073,8 +1131,12 @@
 
         // ========== PUBLICACIONES ==========
         function loadPublications() {
-            const stored = localStorage.getItem('neuropsycare-publications');
-            publications = stored ? JSON.parse(stored) : [];
+            const stored = safeGetItem(localStorage, 'neuropsycare-publications');
+            try {
+                publications = stored ? JSON.parse(stored) : [];
+            } catch (err) {
+                publications = [];
+            }
             renderPublicationsTable();
             updateStats();
         }
@@ -1222,7 +1284,10 @@
                 showToast('Publicación creada ✅', 'success');
             }
             
-            localStorage.setItem('neuropsycare-publications', JSON.stringify(publications));
+            const saved = safeSetItem(localStorage, 'neuropsycare-publications', JSON.stringify(publications));
+            if (!saved) {
+                showToast('⚠️ No se pudo guardar (almacenamiento bloqueado)', 'error');
+            }
             closeModal();
             renderPublicationsTable();
             updateStats();
@@ -1249,7 +1314,7 @@
         function confirmDelete() {
             if (deleteTargetId !== null) {
                 publications = publications.filter(p => p.id !== deleteTargetId);
-                localStorage.setItem('neuropsycare-publications', JSON.stringify(publications));
+                safeSetItem(localStorage, 'neuropsycare-publications', JSON.stringify(publications));
                 renderPublicationsTable();
                 updateStats();
                 showToast('Publicación eliminada 🗑️', 'warning');
