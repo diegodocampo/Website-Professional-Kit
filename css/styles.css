@@ -963,6 +963,13 @@ strong {
     gap: var(--spacing-md);
     margin-top: var(--spacing-xl);
 }
+.bio-content-wrapper {
+    background-color: var(--color-blanco);
+    border-left: 4px solid var(--color-acento);
+    border-radius: 0 var(--border-radius-lg) var(--border-radius-lg) 0;
+    padding: var(--spacing-2xl) var(--spacing-3xl);
+    box-shadow: var(--shadow-sm);
+}
 
 /* ========== FILOSOFÍA ========== */
 .philosophy {
