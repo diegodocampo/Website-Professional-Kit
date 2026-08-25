@@ -18,20 +18,20 @@
     <style>
         /* ========== VARIABLES ========== */
         :root {
-            --color-morado-principal: #35204F;
-            --color-morado-medio: #5B3B70;
-            --color-lavanda: #8E789F;
-            --color-acento: #C5B8D4;
-            --color-acento-claro: #D8CDE3;
-            --color-acento-suave: #E6DFEE;
-            --color-acento-intenso: #B8A5CC;
-            --color-acento-palido: rgba(197, 184, 212, 0.25);
-            --color-marfil: #FAF8F5;
-            --color-fondo-secundario: #F0EBF0;
+            --color-morado-principal: #123A5C;
+            --color-morado-medio: #1D5488;
+            --color-lavanda: #4E7DAA;
+            --color-acento: #D4AF37;
+            --color-acento-claro: #E4C766;
+            --color-acento-suave: #F6ECC9;
+            --color-acento-intenso: #B8901F;
+            --color-acento-palido: rgba(212, 175, 55, 0.22);
+            --color-marfil: #FAF8F3;
+            --color-fondo-secundario: #EAEFF4;
             --color-blanco: #FFFFFF;
-            --color-texto: #29262D;
-            --color-texto-secundario: #4A4550;
-            --color-texto-claro: #6B6570;
+            --color-texto: #1B242E;
+            --color-texto-secundario: #3E4C5A;
+            --color-texto-claro: #64758A;
             --color-exito: #4A7A5C;
             --color-exito-fondo: #D8F3DC;
             --color-error: #A4161A;
@@ -40,9 +40,9 @@
             --color-warning-fondo: #FFF3CD;
             --font-serif: 'Playfair Display', Georgia, serif;
             --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
-            --shadow-sm: 0 2px 8px rgba(53, 32, 79, 0.06);
-            --shadow-md: 0 4px 20px rgba(53, 32, 79, 0.08);
-            --shadow-lg: 0 12px 40px rgba(53, 32, 79, 0.12);
+            --shadow-sm: 0 2px 8px rgba(18, 58, 92, 0.06);
+            --shadow-md: 0 4px 20px rgba(18, 58, 92, 0.08);
+            --shadow-lg: 0 12px 40px rgba(18, 58, 92, 0.12);
             --border-radius-sm: 4px;
             --border-radius-md: 8px;
             --border-radius-lg: 12px;
@@ -60,7 +60,7 @@
 
         body {
             font-family: var(--font-sans);
-            background-color: #F0EDE6;
+            background-color: #EEF2F6;
             color: var(--color-texto);
             line-height: 1.6;
             min-height: 100vh;
@@ -130,7 +130,7 @@
         .login-form input {
             width: 100%;
             padding: 0.8rem 1rem;
-            border: 2px solid rgba(53, 32, 79, 0.12);
+            border: 2px solid rgba(18, 58, 92, 0.12);
             border-radius: var(--border-radius-sm);
             font-family: var(--font-sans);
             font-size: 1rem;
@@ -257,13 +257,14 @@
         }
 
         .admin-header {
-            background-color: var(--color-morado-principal);
-            color: var(--color-marfil);
+            background-color: var(--color-marfil);
+            color: var(--color-morado-principal);
             padding: 1rem 0;
             position: sticky;
             top: 0;
             z-index: 100;
             box-shadow: var(--shadow-md);
+            border-bottom: 3px solid var(--color-acento);
         }
 
         .admin-header-inner {
@@ -292,7 +293,7 @@
 
         .admin-brand span {
             font-style: italic;
-            color: var(--color-acento-suave);
+            color: var(--color-acento-intenso);
         }
 
         .admin-user {
@@ -303,13 +304,13 @@
 
         .admin-user span {
             font-size: 0.9rem;
-            color: rgba(250, 248, 245, 0.7);
+            color: var(--color-texto-claro);
         }
 
         .btn-logout {
-            background: rgba(197, 184, 212, 0.2);
-            color: var(--color-acento-suave);
-            border: 1px solid rgba(197, 184, 212, 0.3);
+            background: var(--color-acento-palido);
+            color: var(--color-morado-principal);
+            border: 1px solid var(--color-acento);
             padding: 0.5rem 1.2rem;
             border-radius: var(--border-radius-sm);
             cursor: pointer;
@@ -413,7 +414,7 @@
 
         .publications-table td {
             padding: 1rem 1.2rem;
-            border-bottom: 1px solid rgba(53, 32, 79, 0.06);
+            border-bottom: 1px solid rgba(18, 58, 92, 0.06);
             font-size: 0.9rem;
             vertical-align: middle;
         }
@@ -440,7 +441,7 @@
         }
 
         .category-divulgacion {
-            background-color: rgba(53, 32, 79, 0.08);
+            background-color: rgba(18, 58, 92, 0.08);
             color: var(--color-morado-principal);
         }
 
@@ -480,7 +481,7 @@
         .modal-overlay {
             position: fixed;
             inset: 0;
-            background-color: rgba(53, 32, 79, 0.7);
+            background-color: rgba(18, 58, 92, 0.7);
             display: flex;
             align-items: flex-start;
             justify-content: center;
@@ -517,7 +518,7 @@
             align-items: center;
             justify-content: space-between;
             padding: 1.5rem 2rem;
-            border-bottom: 1px solid rgba(53, 32, 79, 0.08);
+            border-bottom: 1px solid rgba(18, 58, 92, 0.08);
         }
 
         .modal-header h2 {
@@ -552,7 +553,7 @@
 
         .modal-footer {
             padding: 1.2rem 2rem;
-            border-top: 1px solid rgba(53, 32, 79, 0.08);
+            border-top: 1px solid rgba(18, 58, 92, 0.08);
             display: flex;
             justify-content: flex-end;
             gap: 0.8rem;
@@ -579,7 +580,7 @@
         .form-group select {
             width: 100%;
             padding: 0.75rem 1rem;
-            border: 2px solid rgba(53, 32, 79, 0.12);
+            border: 2px solid rgba(18, 58, 92, 0.12);
             border-radius: var(--border-radius-sm);
             font-family: var(--font-sans);
             font-size: 0.95rem;
@@ -625,7 +626,7 @@
             flex-wrap: wrap;
             gap: 0.4rem;
             padding: 0.5rem;
-            border: 2px solid rgba(53, 32, 79, 0.12);
+            border: 2px solid rgba(18, 58, 92, 0.12);
             border-radius: var(--border-radius-sm);
             background-color: var(--color-marfil);
             min-height: 44px;
@@ -733,7 +734,7 @@
         .confirm-dialog {
             position: fixed;
             inset: 0;
-            background-color: rgba(53, 32, 79, 0.7);
+            background-color: rgba(18, 58, 92, 0.7);
             display: flex;
             align-items: center;
             justify-content: center;
