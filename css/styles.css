@@ -91,6 +91,7 @@
 html {
     scroll-behavior: smooth;
     font-size: 16px;
+    scroll-padding-top: 120px;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
 }
@@ -709,7 +710,6 @@ strong {
 /* Quitar outline azul en la sección al hacer skip-link */
 #que-es-neuropsicologia:focus {
     outline: none;
-   scroll-margin-top: 230px;
 }
 
 /* ========== TESTIMONIAL ========== */
