@@ -709,6 +709,7 @@ strong {
 /* Quitar outline azul en la sección al hacer skip-link */
 #que-es-neuropsicologia:focus {
     outline: none;
+   scroll-margin-top: 120px;
 }
 
 /* ========== TESTIMONIAL ========== */
