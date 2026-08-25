@@ -31,7 +31,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500;1,600&display=swap" rel="stylesheet">
     
     <!-- Hojas de estilo -->
-    <link rel="stylesheet" href="css/styles.css?v=3">
+    <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
     <!-- Skip to main content - Accesibilidad -->
@@ -41,7 +41,7 @@
     <header class="site-header" role="banner">
         <div class="container header-inner">
             <a href="index.html" class="logo" aria-label="Neuropsycare - Ir a inicio">
-                <span class="logo-icon" aria-hidden="true">🧠</span>
+                <img src="assets/images/logo.png" alt="Logo Neuropsycare" class="logo-img">
                 <span class="logo-text">Neuropsy<em class="logo-accent">care</em></span>
             </a>
             
@@ -81,7 +81,7 @@
             <div class="container">
                 <div class="search-wrapper">
                     <div class="search-input-group">
-                        <svg class="search-icon" width="24" height="24" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                        <svg class="search-icon" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
                             <circle cx="8.5" cy="8.5" r="6.5" stroke="currentColor" stroke-width="2"/>
                             <path d="M13.5 13.5L18 18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
                         </svg>
@@ -125,7 +125,7 @@
                                     </button>
                                     <div id="subcategory-neuropsicologia" class="blog-subcategory-content">
                                         <div class="blog-grid" data-grid-neuropsicologia>
-                                            <!-- Artículos se cargan dinámicamente -->
+                                            <!-- Artículos se cargan dinámicamente desde el JSON -->
                                         </div>
                                     </div>
                                 </div>
@@ -139,7 +139,7 @@
                                     </button>
                                     <div id="subcategory-neurociencias" class="blog-subcategory-content">
                                         <div class="blog-grid" data-grid-neurociencias>
-                                            <!-- Artículos se cargan dinámicamente -->
+                                            <!-- Artículos se cargan dinámicamente desde el JSON -->
                                         </div>
                                     </div>
                                 </div>
@@ -157,7 +157,7 @@
                         </button>
                         <div id="category-reflexiones" class="blog-category-content">
                             <div class="blog-grid" data-grid-reflexiones>
-                                <!-- Artículos se cargan dinámicamente -->
+                                <!-- Artículos se cargan dinámicamente desde el JSON -->
                             </div>
                         </div>
                     </div>
@@ -171,7 +171,7 @@
                         </button>
                         <div id="category-recomendaciones" class="blog-category-content">
                             <div class="blog-grid" data-grid-recomendaciones>
-                                <!-- Artículos se cargan dinámicamente -->
+                                <!-- Artículos se cargan dinámicamente desde el JSON -->
                             </div>
                         </div>
                     </div>
@@ -267,8 +267,8 @@
             <div class="footer-contact">
                 <h4>Contacto</h4>
                 <address>
-                    <p>📧 <a href="mailto:info@neuropsycare.com">info@neuropsycare.com</a></p>
-                    <p>📱 <a href="tel:+34123456789">+34 123 456 789</a></p>
+                    <p>📧 <a href="mailto:corina.munteanu173@gmail.com">corina.munteanu173@gmail.com</a></p>
+                    <p>📱 <a href="tel:+34603713493">+34 603 713 493</a></p>
                 </address>
             </div>
             
