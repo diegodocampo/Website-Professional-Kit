@@ -1,4 +1,4 @@
-/* ============================================================
+/* ============================================================c
    NEUROPSYCARE - HOJA DE ESTILOS PRINCIPAL
    Paleta: Morado plum (#35204F), Morado medio (#5B3B70), 
            Lavanda suave (#8E789F), Lila lavanda claro (#C5B8D4), 
@@ -709,7 +709,7 @@ strong {
 /* Quitar outline azul en la sección al hacer skip-link */
 #que-es-neuropsicologia:focus {
     outline: none;
-   scroll-margin-top: 300px;
+   scroll-margin-top: 230px;
 }
 
 /* ========== TESTIMONIAL ========== */
