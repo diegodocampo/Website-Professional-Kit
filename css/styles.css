@@ -370,15 +370,15 @@ strong {
 }
 
 .logo-img {
-    width: 75px;
-    height: 75px;
+    width: 30px;
+    height: 30px;
     object-fit: contain;
     flex-shrink: 0;
 }
 
 .logo-text {
     font-family: var(--font-serif);
-    font-size: 2rem;
+    font-size: 1.5rem;
     font-weight: 700;
     letter-spacing: -0.02em;
 }
@@ -490,64 +490,21 @@ strong {
     justify-content: center;
 }
 
-.hero-illustration {
-    position: relative;
+/* Nueva imagen estática del Hero */
+.hero-image-wrapper {
     width: 100%;
     max-width: 380px;
-    aspect-ratio: 1;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background: linear-gradient(135deg, rgba(53, 32, 79, 0.03) 0%, var(--color-acento-palido) 100%);
     border-radius: var(--border-radius-xl);
+    overflow: hidden;
     border: 1px solid var(--color-acento-hover);
+    box-shadow: var(--shadow-md);
 }
 
-.hero-img {
+.hero-img-static {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    border-radius: var(--border-radius-xl);
-    position: relative;
-    z-index: 2;
-}
-
-.floating-shape {
-    position: absolute;
-    border-radius: var(--border-radius-full);
-    opacity: 0.15;
-}
-
-.shape-1 {
-    width: 60px;
-    height: 60px;
-    background-color: var(--color-acento);
-    top: 15%;
-    right: 15%;
-    animation: float 8s ease-in-out infinite 1s;
-}
-
-.shape-2 {
-    width: 40px;
-    height: 40px;
-    background-color: var(--color-morado-principal);
-    bottom: 20%;
-    left: 10%;
-    animation: float 7s ease-in-out infinite 0.5s;
-}
-
-.shape-3 {
-    width: 30px;
-    height: 30px;
-    background-color: var(--color-lavanda);
-    top: 40%;
-    left: 20%;
-    animation: float 9s ease-in-out infinite 2s;
-}
-
-@keyframes float {
-    0%, 100% { transform: translateY(0); }
-    50% { transform: translateY(-15px); }
+    display: block;
 }
 
 .pretitle {
@@ -718,6 +675,42 @@ strong {
     color: var(--color-morado-principal);
 }
 
+/* ========== DESCRIPCIÓN DE NEUROPSICOLOGÍA (Inicio) ========== */
+.neuro-description {
+    background-color: var(--color-marfil);
+}
+
+.neuro-description-content {
+    max-width: 750px;
+    margin: 0 auto;
+    text-align: left;
+    background-color: var(--color-blanco);
+    border-left: 4px solid var(--color-acento);
+    border-radius: 0 var(--border-radius-lg) var(--border-radius-lg) 0;
+    padding: var(--spacing-2xl) var(--spacing-3xl);
+    box-shadow: var(--shadow-sm);
+}
+
+.neuro-description-content p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: var(--color-texto-secundario);
+    margin-bottom: var(--spacing-md);
+}
+
+.neuro-description-content footer cite {
+    font-family: var(--font-sans);
+    font-weight: 600;
+    font-style: normal;
+    color: var(--color-acento-intenso);
+    font-size: 0.9rem;
+}
+
+/* Quitar outline azul en la sección al hacer skip-link */
+#que-es-neuropsicologia:focus {
+    outline: none;
+}
+
 /* ========== TESTIMONIAL ========== */
 .testimonial {
     background-color: var(--color-fondo-secundario);
@@ -825,13 +818,6 @@ strong {
     display: grid;
     grid-template-columns: 1.5fr 1fr 1fr;
     gap: var(--spacing-2xl);
-}
-
-.footer-logo {
-    width: 45px;
-    height: 45px;
-    margin-bottom: var(--spacing-sm);
-    flex-shrink: 0;
 }
 
 .footer-brand .logo-text {
@@ -1942,7 +1928,15 @@ strong {
     font-size: 0.9rem;
 }
 
-/* ========== FORMULARIO DE CONTACTO ========== */
+/* ========== CONTACTO ========== */
+.contact-info-only {
+    max-width: 500px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-lg);
+}
+
 .contact-grid {
     display: grid;
     grid-template-columns: 1fr 1.2fr;
@@ -2050,15 +2044,6 @@ strong {
     border-color: var(--color-acento);
     color: var(--color-morado-principal);
     transform: translateY(-2px);
-}
-
-/* Contacto simplificado (sin formulario) */
-.contact-info-only {
-    max-width: 500px;
-    margin: 0 auto;
-    display: flex;
-    flex-direction: column;
-    gap: var(--spacing-lg);
 }
 
 .contact-form-wrapper {
@@ -2383,7 +2368,7 @@ strong {
 .cookie-overlay.cookie-overlay-visible {
     opacity: 1;
     visibility: visible;
-}
+} 
 
 /* ========== RESPONSIVE ========== */
 @media (max-width: 900px) {
