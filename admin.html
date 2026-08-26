@@ -291,7 +291,12 @@
             object-fit: contain;
         }
 
-        .admin-brand span {
+        .admin-brand-word {
+            color: var(--color-morado-principal);
+            font-style: normal;
+        }
+
+        .admin-brand-word span {
             font-style: italic;
             color: var(--color-acento-intenso);
         }
@@ -601,6 +606,12 @@
             min-height: 120px;
         }
 
+        .pub-content-textarea {
+            min-height: 250px;
+            font-family: var(--font-sans);
+            line-height: 1.7;
+        }
+
         .form-group .hint {
             font-size: 0.8rem;
             color: var(--color-texto-claro);
@@ -835,7 +846,7 @@
             <div class="admin-header-inner">
                 <div class="admin-brand">
                     <img src="assets/images/logo.png" alt="Logo Neuropsycare">
-                    Neuropsy<span>care</span>
+                    <span class="admin-brand-word">Neuropsy<span>care</span></span>
                 </div>
                 <div class="admin-user">
                     <span>Bienvenida, Corina</span>
@@ -946,10 +957,23 @@
                     </div>
                     
                     <div class="form-group">
+                        <label for="pub-image-url">URL de la imagen de portada</label>
+                        <input type="url" id="pub-image-url" placeholder="https://ejemplo.com/imagen.jpg">
+                        <p class="hint">Opcional. Si la dejas vacía, se usará el emoji de arriba como icono de portada.</p>
+                        <p class="form-error" id="error-image-url"></p>
+                    </div>
+                    
+                    <div class="form-group">
                         <label for="pub-excerpt">Extracto <span class="required">*</span></label>
                         <textarea id="pub-excerpt" placeholder="Breve descripción que aparecerá en la tarjeta del blog (máx. 200 caracteres)" required maxlength="250" rows="3"></textarea>
                         <p class="hint"><span id="excerpt-count">0</span>/250 caracteres</p>
                         <p class="form-error" id="error-excerpt"></p>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="pub-content">Contenido completo del artículo <span class="required">*</span></label>
+                        <textarea id="pub-content" class="pub-content-textarea" placeholder="Escribe aquí el contenido completo del artículo (puedes usar párrafos, listas, etc.)" required rows="10"></textarea>
+                        <p class="form-error" id="error-content"></p>
                     </div>
                     
                     <div class="form-group">
@@ -1205,7 +1229,9 @@
                 document.getElementById('pub-category').value = publication.category;
                 document.getElementById('pub-readtime').value = publication.readTime || '';
                 document.getElementById('pub-image').value = publication.image || '';
+                document.getElementById('pub-image-url').value = publication.imageUrl || '';
                 document.getElementById('pub-excerpt').value = publication.excerpt || '';
+                document.getElementById('pub-content').value = publication.content || '';
                 currentTags = publication.tags || [];
                 renderTags();
             } else {
@@ -1225,6 +1251,8 @@
             const category = document.getElementById('pub-category').value;
             const excerpt = document.getElementById('pub-excerpt').value.trim();
             const image = document.getElementById('pub-image').value.trim() || '🧠';
+            const imageUrl = document.getElementById('pub-image-url').value.trim();
+            const content = document.getElementById('pub-content').value.trim();
             const readTime = document.getElementById('pub-readtime').value.trim() || '5 min';
             
             clearErrors();
@@ -1251,6 +1279,11 @@
                 isValid = false;
             }
             
+            if (!content) {
+                showFieldError('error-content', 'El contenido completo del artículo es obligatorio.');
+                isValid = false;
+            }
+            
             if (!isValid) return;
             
             const editingIdValue = document.getElementById('pub-id').value;
@@ -1265,6 +1298,8 @@
                         category,
                         excerpt,
                         image,
+                        imageUrl,
+                        content,
                         readTime,
                         tags: currentTags
                     };
@@ -1277,6 +1312,8 @@
                     category,
                     excerpt,
                     image,
+                    imageUrl,
+                    content,
                     readTime,
                     tags: currentTags,
                     date: new Date().toISOString().split('T')[0]
