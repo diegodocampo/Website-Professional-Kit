@@ -833,9 +833,6 @@
                     🔐 Acceder al panel
                 </button>
             </form>
-            <p style="margin-top: 1rem; font-size: 0.8rem; color: var(--color-texto-claro);">
-                Contraseña por defecto: <strong>neuropsique2026</strong>
-            </p>
             <p id="storage-warning" class="login-warning" aria-live="polite"></p>
         </div>
     </div>
@@ -930,6 +927,13 @@
                         <p class="form-error" id="error-title"></p>
                     </div>
                     
+                    <div class="form-group">
+                        <label for="pub-author">Autor <span class="required">*</span></label>
+                        <input type="text" id="pub-author" placeholder="Nombre y apellidos del autor" required maxlength="80" value="Corina C. Munteanu">
+                        <p class="hint">Se guardará como texto completo (ej: "Corina C. Munteanu"). El estilo y la posición en la página del artículo los define articulo.html.</p>
+                        <p class="form-error" id="error-author"></p>
+                    </div>
+                    
                     <div class="form-row">
                         <div class="form-group">
                             <label for="pub-category">Categoría <span class="required">*</span></label>
@@ -1013,7 +1017,7 @@
            PANEL DE ADMINISTRACIÓN - NEUROPSYCARE
            ============================================================ */
 
-        const ADMIN_PASSWORD = 'neuropsique2026';
+        const ADMIN_PASSWORD = 'NeuropapaYA37';
         const SESSION_KEY = 'neuropsycare-admin-logged';
 
         let publications = [];
@@ -1226,6 +1230,7 @@
                 document.getElementById('modal-title').textContent = 'Editar publicación';
                 document.getElementById('pub-id').value = publication.id;
                 document.getElementById('pub-title').value = publication.title;
+                document.getElementById('pub-author').value = publication.author || '';
                 document.getElementById('pub-category').value = publication.category;
                 document.getElementById('pub-readtime').value = publication.readTime || '';
                 document.getElementById('pub-image').value = publication.image || '';
@@ -1248,6 +1253,7 @@
 
         function handleSavePublication() {
             const title = document.getElementById('pub-title').value.trim();
+            const author = document.getElementById('pub-author').value.trim();
             const category = document.getElementById('pub-category').value;
             const excerpt = document.getElementById('pub-excerpt').value.trim();
             const image = document.getElementById('pub-image').value.trim() || '🧠';
@@ -1261,6 +1267,11 @@
             
             if (!title) {
                 showFieldError('error-title', 'El título es obligatorio.');
+                isValid = false;
+            }
+            
+            if (!author) {
+                showFieldError('error-author', 'El autor es obligatorio.');
                 isValid = false;
             }
             
@@ -1295,6 +1306,7 @@
                     publications[index] = {
                         ...publications[index],
                         title,
+                        author,
                         category,
                         excerpt,
                         image,
@@ -1309,6 +1321,7 @@
                 const newPub = {
                     id: Date.now(),
                     title,
+                    author,
                     category,
                     excerpt,
                     image,
