@@ -12,7 +12,11 @@
     <meta property="og:title" content="Artículo | Neuropsycare">
     <meta property="og:description" content="Artículo del NeuroBlog de Neuropsycare sobre neurociencia y neuropsicología.">
     <meta property="og:type" content="article">
+    <meta property="og:url" content="https://neuropsycare.github.io/articulo.html">
     <meta property="og:locale" content="es_ES">
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://neuropsycare.github.io/articulo.html">
     
     <title>Artículo | Neuropsycare</title>
     
@@ -26,7 +30,12 @@
     
     <!-- Hojas de estilo -->
     <link rel="stylesheet" href="css/styles.css">
+    
+    <!-- Google Analytics -->
     <script src="js/analytics.js"></script>
+    
+    <!-- iubenda Cookie Solution (Banner de cookies) -->
+    <script type="text/javascript" src="https://embeds.iubenda.com/widgets/974cb25a-8779-4384-a6e5-5ad0bc93932d.js"></script>
 </head>
 <body>
     <!-- Skip to main content - Accesibilidad -->
@@ -63,36 +72,36 @@
         
         <!-- HERO DEL ARTÍCULO -->
         <section class="article-hero article-hero-layout" aria-labelledby="article-title">
-    <div class="container">
-        <a href="publicaciones.html" class="article-back article-back-light">
-            <span aria-hidden="true">←</span> Volver a publicaciones
-        </a>
-        <div class="article-hero-grid">
-            <div class="article-hero-text">
-                <h1 id="article-title">Cargando artículo...</h1>
-                <div class="article-meta" id="article-meta">
-                    <!-- Se carga dinámicamente -->
+            <div class="container">
+                <a href="publicaciones.html" class="article-back article-back-light">
+                    <span aria-hidden="true">←</span> Volver a publicaciones
+                </a>
+                <div class="article-hero-grid">
+                    <div class="article-hero-text">
+                        <h1 id="article-title">Cargando artículo...</h1>
+                        <div class="article-meta" id="article-meta">
+                            <!-- Se carga dinámicamente -->
+                        </div>
+                    </div>
+                    <div class="article-hero-image" id="article-hero-image">
+                        <!-- La imagen se cargará dinámicamente -->
+                    </div>
                 </div>
             </div>
-            <div class="article-hero-image" id="article-hero-image">
-                <!-- La imagen se cargará dinámicamente -->
-            </div>
-        </div>
-    </div>
-</section>
+        </section>
         
         <!-- CONTENIDO DEL ARTÍCULO -->
         <section class="article-content-section" aria-labelledby="article-content-heading">
-    <div class="container">
-        <article class="article-content article-content-framed" id="article-content">
-            <h2 id="article-content-heading" class="sr-only">Contenido del artículo</h2>
-            <p>Cargando contenido del artículo...</p>
-        </article>
-        <footer class="article-author" id="article-author">
-            <!-- El autor se cargará dinámicamente -->
-        </footer>
-    </div>
-</section>
+            <div class="container">
+                <article class="article-content article-content-framed" id="article-content">
+                    <h2 id="article-content-heading" class="sr-only">Contenido del artículo</h2>
+                    <p>Cargando contenido del artículo...</p>
+                </article>
+                <footer class="article-author" id="article-author">
+                    <!-- El autor se cargará dinámicamente -->
+                </footer>
+            </div>
+        </section>
         
         <!-- CTA FINAL -->
         <section class="cta section-padding" aria-labelledby="article-cta-heading">
@@ -141,43 +150,16 @@
             <div class="footer-legal">
                 <p>&copy; 2026 Neuropsycare. Todos los derechos reservados.</p>
                 <ul class="legal-links">
-                    <li><a href="#">Aviso legal</a></li>
-                    <li><a href="#">Privacidad</a></li>
-                    <li><a href="#">Cookies</a></li>
+                    <li><a href="aviso-legal.html">Aviso legal</a></li>
+                    <li><a href="https://www.iubenda.com/privacy-policy/43127974" class="iubenda-black iubenda-noiframe iubenda-embed" title="Política de Privacidad">Privacidad</a></li>
+                    <li><a href="https://www.iubenda.com/privacy-policy/43127974/cookie-policy" class="iubenda-black iubenda-noiframe iubenda-embed" title="Política de Cookies">Cookies</a></li>
                 </ul>
             </div>
         </div>
     </footer>
 
-    <!-- ========== BANNER DE COOKIES ========== -->
-    <div id="cookie-banner" class="cookie-banner" role="dialog" aria-labelledby="cookie-title" aria-describedby="cookie-description" aria-modal="true">
-        <div class="cookie-container">
-            <div class="cookie-content">
-                <div class="cookie-icon" aria-hidden="true">🍪</div>
-                <div class="cookie-text">
-                    <h3 id="cookie-title">Este sitio utiliza cookies</h3>
-                    <p id="cookie-description">
-                        Utilizamos cookies propias y de terceros para fines analíticos, mejorar tu experiencia de navegación y personalizar el contenido. Puedes aceptar todas las cookies, rechazarlas o configurar tus preferencias.
-                    </p>
-                </div>
-            </div>
-            
-            <div class="cookie-actions">
-                <button id="btn-accept-cookies" class="btn btn-primary btn-sm">
-                    Aceptar todas
-                </button>
-                <button id="btn-reject-cookies" class="btn btn-outline btn-sm">
-                    Solo necesarias
-                </button>
-                <a href="#" class="cookie-settings-link" aria-label="Configurar preferencias de cookies">
-                    Configurar preferencias
-                </a>
-            </div>
-        </div>
-    </div>
-
-    <!-- Overlay del banner de cookies -->
-    <div id="cookie-overlay" class="cookie-overlay"></div>
+    <!-- ========== SCRIPT IUBENDA ========== -->
+    <script type="text/javascript">(function (w,d) {var loader = function () {var s = d.createElement("script"), tag = d.getElementsByTagName("script")[0]; s.src="https://cdn.iubenda.com/iubenda.js"; tag.parentNode.insertBefore(s,tag);}; if(w.addEventListener){w.addEventListener("load", loader, false);}else if(w.attachEvent){w.attachEvent("onload", loader);}else{w.onload = loader;}})(window, document);</script>
 
     <!-- JavaScript -->
     <script src="js/main.js" defer></script>
