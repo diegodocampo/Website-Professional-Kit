@@ -14,11 +14,11 @@
     <meta property="og:title" content="NeuroBlog · Divulgación, Reflexiones y Recomendaciones | Neuropsycare">
     <meta property="og:description" content="Divulgación científica, artículos de reflexión y recomendaciones sobre neurociencia, neuropsicología y su relación con lo cotidiano.">
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://diegodocampo.github.io/Website-Professional-Kit/publicaciones.html">
+    <meta property="og:url" content="https://neuropsycare.github.io/publicaciones.html">
     <meta property="og:locale" content="es_ES">
     
     <!-- Canonical URL -->
-    <link rel="canonical" href="https://diegodocampo.github.io/Website-Professional-Kit/publicaciones.html">
+    <link rel="canonical" href="https://neuropsycare.github.io/publicaciones.html">
     
     <title>NeuroBlog · Divulgación, Reflexiones y Recomendaciones | Neuropsycare</title>
     
@@ -32,7 +32,12 @@
     
     <!-- Hojas de estilo -->
     <link rel="stylesheet" href="css/styles.css">
+    
+    <!-- Google Analytics -->
     <script src="js/analytics.js"></script>
+    
+    <!-- iubenda Cookie Solution (Banner de cookies) -->
+    <script type="text/javascript" src="https://embeds.iubenda.com/widgets/974cb25a-8779-4384-a6e5-5ad0bc93932d.js"></script>
 </head>
 <body>
     <!-- Skip to main content - Accesibilidad -->
@@ -199,7 +204,7 @@
                         <h2 id="newsletter-heading">Newsletter</h2>
                         <p>Suscríbete para recibir en tu email las nuevas publicaciones del NeuroBlog, novedades sobre neurociencia y convocatorias de talleres. Sin spam, solo contenido de valor.</p>
                     </div>
-                    <form id="newsletter-form" class="newsletter-form" novalidate>
+                    <form id="newsletter-form" class="newsletter-form" action="https://e9522c40.sibforms.com/serve/MUIFAIFLkloaKzjU_w1dHmp1EQWr0BTZZeyeF2fs7JMZa-j1MaTinmjY1b3Tr3LRzCH8uEWeIDDhZ2t-Psxi3FlTpbCHyudR5J8zEZDEXbUC6-udBcIOPAouZ4a8NJcnggJjG4Dh_qa6zNJL2iZuoMcwraaLx5LulKWy7blzHmq_fmGcabdevjH7i-tC4Cx35OXoOGw_D2q1OHJz6A==" method="POST" novalidate>
                         <div class="newsletter-input-group">
                             <svg class="search-icon" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
                                 <path d="M2 5C2 4.44772 2.44772 4 3 4H17C17.5523 4 18 4.44772 18 5V15C18 15.5523 17.5523 16 17 16H3C2.44772 16 2 15.5523 2 15V5Z" stroke="currentColor" stroke-width="2"/>
@@ -208,7 +213,7 @@
                             <input 
                                 type="email" 
                                 id="newsletter-email" 
-                                name="newsletter-email" 
+                                name="EMAIL" 
                                 placeholder="tuemail@ejemplo.com" 
                                 required 
                                 autocomplete="email"
@@ -224,7 +229,7 @@
                             <span aria-hidden="true">✓</span> ¡Te has suscrito correctamente! Revisa tu email para confirmar.
                         </div>
                         <p class="newsletter-disclaimer">
-                            Sin spam, solo contenido de valor. Puedes darte de baja cuando quieras. Consulta nuestra <a href="#">política de privacidad</a>.
+                            Sin spam, solo contenido de valor. Puedes darte de baja cuando quieras. Consulta nuestra <a href="https://www.iubenda.com/privacy-policy/43127974" class="iubenda-black iubenda-noiframe iubenda-embed" title="Política de Privacidad">política de privacidad</a>.
                         </p>
                     </form>
                 </div>
@@ -276,43 +281,16 @@
             <div class="footer-legal">
                 <p>&copy; 2026 Neuropsycare. Todos los derechos reservados.</p>
                 <ul class="legal-links">
-                    <li><a href="#">Aviso legal</a></li>
-                    <li><a href="#">Privacidad</a></li>
-                    <li><a href="#">Cookies</a></li>
+                    <li><a href="aviso-legal.html">Aviso legal</a></li>
+                    <li><a href="https://www.iubenda.com/privacy-policy/43127974" class="iubenda-black iubenda-noiframe iubenda-embed" title="Política de Privacidad">Privacidad</a></li>
+                    <li><a href="https://www.iubenda.com/privacy-policy/43127974/cookie-policy" class="iubenda-black iubenda-noiframe iubenda-embed" title="Política de Cookies">Cookies</a></li>
                 </ul>
             </div>
         </div>
     </footer>
 
-    <!-- ========== BANNER DE COOKIES ========== -->
-    <div id="cookie-banner" class="cookie-banner" role="dialog" aria-labelledby="cookie-title" aria-describedby="cookie-description" aria-modal="true">
-        <div class="cookie-container">
-            <div class="cookie-content">
-                <div class="cookie-icon" aria-hidden="true">🍪</div>
-                <div class="cookie-text">
-                    <h3 id="cookie-title">Este sitio utiliza cookies</h3>
-                    <p id="cookie-description">
-                        Utilizamos cookies propias y de terceros para fines analíticos, mejorar tu experiencia de navegación y personalizar el contenido. Puedes aceptar todas las cookies, rechazarlas o configurar tus preferencias.
-                    </p>
-                </div>
-            </div>
-            
-            <div class="cookie-actions">
-                <button id="btn-accept-cookies" class="btn btn-primary btn-sm">
-                    Aceptar todas
-                </button>
-                <button id="btn-reject-cookies" class="btn btn-outline btn-sm">
-                    Solo necesarias
-                </button>
-                <a href="#" class="cookie-settings-link" aria-label="Configurar preferencias de cookies">
-                    Configurar preferencias
-                </a>
-            </div>
-        </div>
-    </div>
-
-    <!-- Overlay del banner de cookies -->
-    <div id="cookie-overlay" class="cookie-overlay"></div>
+    <!-- ========== SCRIPT IUBENDA ========== -->
+    <script type="text/javascript">(function (w,d) {var loader = function () {var s = d.createElement("script"), tag = d.getElementsByTagName("script")[0]; s.src="https://cdn.iubenda.com/iubenda.js"; tag.parentNode.insertBefore(s,tag);}; if(w.addEventListener){w.addEventListener("load", loader, false);}else if(w.attachEvent){w.attachEvent("onload", loader);}else{w.onload = loader;}})(window, document);</script>
 
     <!-- JavaScript -->
     <script src="js/main.js" defer></script>
