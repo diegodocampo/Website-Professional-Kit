@@ -84,11 +84,11 @@ let publicationsData = [];
 
 async function fetchPublications() {
     try {
-        const response = await fetch('publicaciones.json');
+        const response = await fetch('json/publicaciones.json');
         if (!response.ok) return [];
         return await response.json();
     } catch (error) {
-        console.warn('No se pudo cargar publicaciones.json:', error);
+        console.warn('No se pudo cargar json/publicaciones.json:', error);
         return [];
     }
 }
