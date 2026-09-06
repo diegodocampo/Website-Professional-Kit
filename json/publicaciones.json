@@ -1,0 +1,54 @@
+[
+    {
+        "id": 1,
+        "title": "Título del artículo",
+        "author": "Corina C. Munteanu",
+        "category": "neuropsicologia",
+        "date": "2026-09-06",
+        "readTime": "5 min",
+        "image": "🧠",
+        "imageUrl": "",
+        "excerpt": "Breve descripción del artículo que aparecerá en la tarjeta del blog. Debe ser concisa y atractiva para que el lector quiera hacer clic.",
+        "content": "Contenido completo del artículo.\n\nPuedes usar párrafos separados por saltos de línea dobles.\n\nCada párrafo se mostrará como un bloque de texto independiente.",
+        "tags": ["neuropsicología", "cerebro", "divulgación"]
+    },
+    {
+        "id": 2,
+        "title": "Título del segundo artículo",
+        "author": "Corina C. Munteanu",
+        "category": "neurociencias",
+        "date": "2026-09-05",
+        "readTime": "7 min",
+        "image": "🔬",
+        "imageUrl": "",
+        "excerpt": "Extracto del segundo artículo. Explica brevemente de qué trata la publicación.",
+        "content": "Contenido completo del segundo artículo.\n\nSeparado en párrafos con saltos de línea dobles.",
+        "tags": ["neurociencias", "investigación"]
+    },
+    {
+        "id": 3,
+        "title": "Título del tercer artículo",
+        "author": "Corina C. Munteanu",
+        "category": "reflexiones",
+        "date": "2026-09-04",
+        "readTime": "4 min",
+        "image": "💭",
+        "imageUrl": "",
+        "excerpt": "Extracto del tercer artículo. Invita a la reflexión y despierta curiosidad.",
+        "content": "Contenido completo del tercer artículo.\n\nCon párrafos separados por saltos de línea dobles.",
+        "tags": ["reflexiones", "mente", "cerebro"]
+    },
+    {
+        "id": 4,
+        "title": "Título del cuarto artículo",
+        "author": "Corina C. Munteanu",
+        "category": "recomendaciones",
+        "date": "2026-09-03",
+        "readTime": "6 min",
+        "image": "📚",
+        "imageUrl": "",
+        "excerpt": "Extracto del cuarto artículo. Recomendaciones de libros, películas o recursos sobre el cerebro.",
+        "content": "Contenido completo del cuarto artículo.\n\nCon párrafos separados por saltos de línea dobles.",
+        "tags": ["recomendaciones", "libros", "recursos"]
+    }
+]
