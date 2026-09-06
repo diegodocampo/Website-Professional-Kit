@@ -134,6 +134,9 @@ async function initBlogSystem() {
     renderCategory('reflexiones', 'data-grid-reflexiones');
     renderCategory('recomendaciones', 'data-grid-recomendaciones');
     
+    // Actualizar contador de Divulgación (suma de subcategorías)
+    updateDivulgacionCount();
+    
     // Búsqueda
     initBlogSearch();
     
@@ -159,6 +162,17 @@ function renderCategory(category, gridSelector) {
     }
     
     grid.innerHTML = articles.map(article => createBlogCard(article)).join('');
+}
+
+function updateDivulgacionCount() {
+    const neuropsicologia = publicationsData.filter(p => p.category === 'neuropsicologia').length;
+    const neurociencias = publicationsData.filter(p => p.category === 'neurociencias').length;
+    const total = neuropsicologia + neurociencias;
+    
+    const divulgacionCount = document.querySelector('[data-count-divulgacion]');
+    if (divulgacionCount) {
+        divulgacionCount.textContent = `${total} artículo${total !== 1 ? 's' : ''}`;
+    }
 }
 
 function createBlogCard(article) {
@@ -201,7 +215,6 @@ function initBlogSearch() {
         const query = searchInput.value.trim().toLowerCase();
         
         if (!query) {
-            // Restaurar vista normal
             searchResultsCount.textContent = '';
             document.querySelectorAll('.blog-category, .blog-subcategory').forEach(el => {
                 el.style.display = '';
@@ -209,7 +222,6 @@ function initBlogSearch() {
             return;
         }
         
-        // Buscar en todos los artículos
         const results = publicationsData.filter(p => 
             p.title.toLowerCase().includes(query) ||
             p.excerpt.toLowerCase().includes(query) ||
@@ -219,7 +231,6 @@ function initBlogSearch() {
         
         searchResultsCount.textContent = `${results.length} resultado${results.length !== 1 ? 's' : ''} encontrado${results.length !== 1 ? 's' : ''}`;
         
-        // Ocultar categorías sin resultados
         document.querySelectorAll('.blog-category').forEach(cat => {
             const catGrids = cat.querySelectorAll('.blog-grid');
             let hasResults = false;
@@ -279,7 +290,6 @@ async function initLatestPublications() {
     
     publicationsData = await fetchPublications();
     
-    // Ordenar por fecha (más reciente primero)
     const sorted = [...publicationsData].sort((a, b) => new Date(b.date) - new Date(a.date));
     const latest = sorted.slice(0, 3);
     
@@ -336,11 +346,13 @@ async function initArticlePage() {
         `;
     }
     
-    // Imagen
+    // Imagen interior (innerImage)
     const imageEl = document.getElementById('article-hero-image');
     if (imageEl) {
-        if (article.imageUrl) {
-            imageEl.innerHTML = `<img src="${article.imageUrl}" alt="Imagen de portada del artículo">`;
+        if (article.innerImage) {
+            imageEl.innerHTML = `<img src="${article.innerImage}" alt="Imagen de la publicación">`;
+        } else if (article.imageUrl) {
+            imageEl.innerHTML = `<img src="${article.imageUrl}" alt="Imagen de la publicación">`;
         } else {
             imageEl.style.display = 'none';
         }
@@ -356,10 +368,20 @@ async function initArticlePage() {
         }
     }
     
-    // Autor
+    // Autor (dentro del cuadro de contenido)
     const authorEl = document.getElementById('article-author');
     if (authorEl) {
         authorEl.innerHTML = `<cite>${article.author || 'Corina C. Munteanu'}</cite>`;
+    }
+    
+    // Bibliografía
+    const bibliographyEl = document.getElementById('bibliography-content');
+    if (bibliographyEl) {
+        if (article.bibliography) {
+            bibliographyEl.textContent = article.bibliography;
+        } else {
+            bibliographyEl.textContent = 'No hay bibliografía disponible.';
+        }
     }
     
     // Actualizar título de la página
@@ -400,7 +422,6 @@ function initNewsletterForm() {
         }
         
         try {
-            // Enviar a Brevo
             await fetch(newsletterForm.action, {
                 method: 'POST',
                 body: new FormData(newsletterForm),
