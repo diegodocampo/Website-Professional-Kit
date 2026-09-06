@@ -246,6 +246,21 @@
             box-shadow: var(--shadow-md);
         }
 
+        .btn-json {
+            background-color: transparent;
+            color: var(--color-acento-intenso);
+            border-color: var(--color-acento);
+            font-size: 0.8rem;
+            padding: 0.4rem 0.9rem;
+        }
+
+        .btn-json:hover {
+            background-color: var(--color-acento);
+            color: var(--color-morado-principal);
+            transform: translateY(-1px);
+            box-shadow: var(--shadow-sm);
+        }
+
         /* ========== PANEL PRINCIPAL ========== */
         .admin-panel {
             display: none;
@@ -463,6 +478,7 @@
         .table-actions {
             display: flex;
             gap: 0.5rem;
+            flex-wrap: wrap;
         }
 
         .empty-table {
@@ -740,74 +756,6 @@
             from { opacity: 1; }
             to { opacity: 0; }
         }
-
-        /* ========== CONFIRMACIÓN ========== */
-        .confirm-dialog {
-            position: fixed;
-            inset: 0;
-            background-color: rgba(18, 58, 92, 0.7);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            z-index: 1500;
-            opacity: 0;
-            visibility: hidden;
-            transition: all var(--transition-base);
-        }
-
-        .confirm-dialog.visible {
-            opacity: 1;
-            visibility: visible;
-        }
-
-        .confirm-card {
-            background-color: var(--color-blanco);
-            border-radius: var(--border-radius-lg);
-            padding: 2rem;
-            max-width: 420px;
-            width: 90%;
-            text-align: center;
-            box-shadow: var(--shadow-lg);
-        }
-
-        .confirm-card .confirm-icon {
-            font-size: 3rem;
-            margin-bottom: 1rem;
-        }
-
-        .confirm-card h3 {
-            font-family: var(--font-serif);
-            margin-bottom: 0.8rem;
-            color: var(--color-morado-principal);
-        }
-
-        .confirm-card p {
-            color: var(--color-texto-claro);
-            margin-bottom: 1.5rem;
-            font-size: 0.95rem;
-        }
-
-        .confirm-actions {
-            display: flex;
-            justify-content: center;
-            gap: 1rem;
-        }
-
-        /* ========== RESPONSIVE ========== */
-        @media (max-width: 768px) {
-            .admin-toolbar {
-                flex-direction: column;
-                align-items: flex-start;
-            }
-            
-            .form-row {
-                grid-template-columns: 1fr;
-            }
-            
-            .admin-stats {
-                grid-template-columns: 1fr 1fr;
-            }
-        }
     </style>
 </head>
 <body>
@@ -930,7 +878,6 @@
                     <div class="form-group">
                         <label for="pub-author">Autor <span class="required">*</span></label>
                         <input type="text" id="pub-author" placeholder="Nombre y apellidos del autor" required maxlength="80" value="Corina C. Munteanu">
-                        <p class="hint">Se guardará como texto completo (ej: "Corina C. Munteanu"). El estilo y la posición en la página del artículo los define articulo.html.</p>
                         <p class="form-error" id="error-author"></p>
                     </div>
                     
@@ -939,8 +886,8 @@
                             <label for="pub-category">Categoría <span class="required">*</span></label>
                             <select id="pub-category" required>
                                 <option value="" disabled selected>Selecciona categoría</option>
-                                <option value="divulgacion-neuropsicologia">Divulgación → Neuropsicología</option>
-                                <option value="divulgacion-neurociencias">Divulgación → Neurociencias</option>
+                                <option value="neuropsicologia">Divulgación → Neuropsicología</option>
+                                <option value="neurociencias">Divulgación → Neurociencias</option>
                                 <option value="reflexiones">Reflexiones</option>
                                 <option value="recomendaciones">Recomendaciones</option>
                             </select>
@@ -949,22 +896,21 @@
                         <div class="form-group">
                             <label for="pub-readtime">Tiempo de lectura</label>
                             <input type="text" id="pub-readtime" placeholder="Ej: 5 min" maxlength="20">
-                            <p class="hint">Opcional. Ej: "5 min"</p>
                         </div>
                     </div>
                     
                     <div class="form-group">
-                        <label for="pub-image">Emoji de portada <span class="required">*</span></label>
-                        <input type="text" id="pub-image" placeholder="🧠" required maxlength="5">
-                        <p class="hint">Elige un emoji representativo para la tarjeta del blog</p>
-                        <p class="form-error" id="error-image"></p>
+                        <label for="pub-image-url">URL de la imagen de portada <span class="required">*</span></label>
+                        <input type="url" id="pub-image-url" placeholder="https://ejemplo.com/imagen-portada.jpg" required>
+                        <p class="hint">Imagen que aparecerá en la tarjeta del blog</p>
+                        <p class="form-error" id="error-image-url"></p>
                     </div>
                     
                     <div class="form-group">
-                        <label for="pub-image-url">URL de la imagen de portada</label>
-                        <input type="url" id="pub-image-url" placeholder="https://ejemplo.com/imagen.jpg">
-                        <p class="hint">Opcional. Si la dejas vacía, se usará el emoji de arriba como icono de portada.</p>
-                        <p class="form-error" id="error-image-url"></p>
+                        <label for="pub-inner-image">URL de la imagen de publicación <span class="required">*</span></label>
+                        <input type="url" id="pub-inner-image" placeholder="https://ejemplo.com/imagen-publicacion.jpg" required>
+                        <p class="hint">Imagen que aparecerá dentro del artículo (a la derecha de la barra morada)</p>
+                        <p class="form-error" id="error-inner-image"></p>
                     </div>
                     
                     <div class="form-group">
@@ -976,8 +922,14 @@
                     
                     <div class="form-group">
                         <label for="pub-content">Contenido completo del artículo <span class="required">*</span></label>
-                        <textarea id="pub-content" class="pub-content-textarea" placeholder="Escribe aquí el contenido completo del artículo (puedes usar párrafos, listas, etc.)" required rows="10"></textarea>
+                        <textarea id="pub-content" class="pub-content-textarea" placeholder="Escribe aquí el contenido completo del artículo" required rows="10"></textarea>
                         <p class="form-error" id="error-content"></p>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="pub-bibliography">Bibliografía <span class="required">*</span></label>
+                        <textarea id="pub-bibliography" placeholder="Pega aquí las referencias bibliográficas tal cual quieres que aparezcan" required rows="4"></textarea>
+                        <p class="form-error" id="error-bibliography"></p>
                     </div>
                     
                     <div class="form-group">
@@ -985,7 +937,6 @@
                         <div class="tags-input-wrapper" id="tags-wrapper">
                             <input type="text" id="tag-input" class="tag-input" placeholder="Escribe y pulsa Enter para añadir etiquetas">
                         </div>
-                        <p class="hint">Pulsa Enter después de cada etiqueta. Ej: memoria, rehabilitación, cerebro</p>
                     </div>
                 </form>
             </div>
@@ -996,7 +947,7 @@
         </div>
     </div>
 
-    <!-- ========== DIÁLOGO DE CONFIRMACIÓN ========== -->
+        <!-- ========== DIÁLOGO DE CONFIRMACIÓN ========== -->
     <div id="confirm-dialog" class="confirm-dialog">
         <div class="confirm-card">
             <div class="confirm-icon">⚠️</div>
@@ -1044,11 +995,6 @@
         const excerptCount = document.getElementById('excerpt-count');
 
         // ========== ALMACENAMIENTO SEGURO ==========
-        // Envuelve localStorage/sessionStorage en try/catch: en algunos
-        // navegadores (sobre todo abriendo el archivo con doble clic, es
-        // decir protocolo file://, o con el bloqueo de cookies de terceros
-        // activado) el acceso lanza una excepción y detiene todo el script.
-        // Con esto, si falla, se avisa en pantalla en vez de quedarse "muerto".
         function safeGetItem(storage, key) {
             try {
                 return storage.getItem(key);
@@ -1189,6 +1135,7 @@
                     <td>
                         <div class="table-actions">
                             <button class="btn btn-outline btn-sm" onclick="editPublication(${pub.id})">✏️ Editar</button>
+                            <button class="btn btn-json" onclick="copyPublicationJSON(${pub.id})">📋 JSON</button>
                             <button class="btn btn-danger" onclick="showDeleteConfirm(${pub.id})">🗑️ Eliminar</button>
                         </div>
                     </td>
@@ -1206,10 +1153,12 @@
 
         function getCategoryLabel(category) {
             const labels = {
-                'divulgacion-neuropsicologia': 'Divulgación → Neuropsicología',
-                'divulgacion-neurociencias': 'Divulgación → Neurociencias',
+                'neuropsicologia': 'Divulgación → Neuropsicología',
+                'neurociencias': 'Divulgación → Neurociencias',
                 'reflexiones': 'Reflexiones',
-                'recomendaciones': 'Recomendaciones'
+                'recomendaciones': 'Recomendaciones',
+                'divulgacion-neuropsicologia': 'Divulgación → Neuropsicología',
+                'divulgacion-neurociencias': 'Divulgación → Neurociencias'
             };
             return labels[category] || category;
         }
@@ -1217,6 +1166,42 @@
         function formatDate(dateString) {
             const date = new Date(dateString);
             return date.toLocaleDateString('es-ES', { year: 'numeric', month: 'long', day: 'numeric' });
+        }
+
+        // ========== COPIAR JSON ==========
+        function copyPublicationJSON(id) {
+            const pub = publications.find(p => p.id === id);
+            if (!pub) return;
+            
+            const jsonObject = {
+                id: pub.id,
+                title: pub.title,
+                author: pub.author,
+                category: pub.category,
+                date: pub.date,
+                readTime: pub.readTime || '5 min',
+                imageUrl: pub.imageUrl || '',
+                innerImage: pub.innerImage || '',
+                excerpt: pub.excerpt,
+                content: pub.content,
+                bibliography: pub.bibliography || '',
+                tags: pub.tags || []
+            };
+            
+            const jsonString = JSON.stringify(jsonObject, null, 4);
+            
+            navigator.clipboard.writeText(jsonString).then(() => {
+                showToast('JSON copiado al portapapeles ✅', 'success');
+            }).catch(() => {
+                // Fallback para navegadores que no soportan clipboard API
+                const textarea = document.createElement('textarea');
+                textarea.value = jsonString;
+                document.body.appendChild(textarea);
+                textarea.select();
+                document.execCommand('copy');
+                document.body.removeChild(textarea);
+                showToast('JSON copiado al portapapeles ✅', 'success');
+            });
         }
 
         // ========== MODAL ==========
@@ -1233,10 +1218,11 @@
                 document.getElementById('pub-author').value = publication.author || '';
                 document.getElementById('pub-category').value = publication.category;
                 document.getElementById('pub-readtime').value = publication.readTime || '';
-                document.getElementById('pub-image').value = publication.image || '';
                 document.getElementById('pub-image-url').value = publication.imageUrl || '';
+                document.getElementById('pub-inner-image').value = publication.innerImage || '';
                 document.getElementById('pub-excerpt').value = publication.excerpt || '';
                 document.getElementById('pub-content').value = publication.content || '';
+                document.getElementById('pub-bibliography').value = publication.bibliography || '';
                 currentTags = publication.tags || [];
                 renderTags();
             } else {
@@ -1256,9 +1242,10 @@
             const author = document.getElementById('pub-author').value.trim();
             const category = document.getElementById('pub-category').value;
             const excerpt = document.getElementById('pub-excerpt').value.trim();
-            const image = document.getElementById('pub-image').value.trim() || '🧠';
             const imageUrl = document.getElementById('pub-image-url').value.trim();
+            const innerImage = document.getElementById('pub-inner-image').value.trim();
             const content = document.getElementById('pub-content').value.trim();
+            const bibliography = document.getElementById('pub-bibliography').value.trim();
             const readTime = document.getElementById('pub-readtime').value.trim() || '5 min';
             
             clearErrors();
@@ -1280,18 +1267,28 @@
                 isValid = false;
             }
             
+            if (!imageUrl) {
+                showFieldError('error-image-url', 'La URL de la imagen de portada es obligatoria.');
+                isValid = false;
+            }
+            
+            if (!innerImage) {
+                showFieldError('error-inner-image', 'La URL de la imagen de publicación es obligatoria.');
+                isValid = false;
+            }
+            
             if (!excerpt) {
                 showFieldError('error-excerpt', 'El extracto es obligatorio.');
                 isValid = false;
             }
             
-            if (!image) {
-                showFieldError('error-image', 'El emoji es obligatorio.');
+            if (!content) {
+                showFieldError('error-content', 'El contenido completo del artículo es obligatorio.');
                 isValid = false;
             }
             
-            if (!content) {
-                showFieldError('error-content', 'El contenido completo del artículo es obligatorio.');
+            if (!bibliography) {
+                showFieldError('error-bibliography', 'La bibliografía es obligatoria.');
                 isValid = false;
             }
             
@@ -1309,9 +1306,10 @@
                         author,
                         category,
                         excerpt,
-                        image,
                         imageUrl,
+                        innerImage,
                         content,
+                        bibliography,
                         readTime,
                         tags: currentTags
                     };
@@ -1324,9 +1322,10 @@
                     author,
                     category,
                     excerpt,
-                    image,
                     imageUrl,
+                    innerImage,
                     content,
+                    bibliography,
                     readTime,
                     tags: currentTags,
                     date: new Date().toISOString().split('T')[0]
