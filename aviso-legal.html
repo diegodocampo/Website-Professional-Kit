@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Aviso Legal de Neuropsycare. Titularidad, condiciones de uso, propiedad intelectual y legislación aplicable.">
+    <meta name="robots" content="index, follow">
+    
+    <title>Aviso Legal | Neuropsycare</title>
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🧠</text></svg>">
+    
+    <!-- Fuentes: Playfair Display + Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500;1,600&display=swap" rel="stylesheet">
+    
+    <style>
+        /* ========== VARIABLES ========== */
+        :root {
+            --color-blanco: #FFFFFF;
+            --color-texto-principal: #2D3748;
+            --color-texto-secundario: #4A5568;
+            --color-acento: #319795;
+            --color-acento-hover: #2C7A7B;
+            --color-fondo-pildora: #EDF2F7;
+            --color-gris-claro: #E2E8F0;
+            --color-marfil: #FAF8F5;
+            --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            --font-serif: 'Playfair Display', Georgia, serif;
+            --shadow-sm: 0 2px 8px rgba(45, 55, 72, 0.06);
+            --shadow-md: 0 4px 20px rgba(45, 55, 72, 0.08);
+            --border-radius-lg: 12px;
+        }
+
+        /* ========== RESET ========== */
+        *, *::before, *::after {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: var(--font-sans);
+            background-color: var(--color-marfil);
+            color: var(--color-texto-principal);
+            line-height: 1.7;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        /* ========== HEADER SIMPLE ========== */
+        .legal-header {
+            background-color: var(--color-blanco);
+            border-bottom: 1px solid var(--color-gris-claro);
+            padding: 1rem 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .legal-header-inner {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 0 1.5rem;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .legal-logo {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            text-decoration: none;
+            color: var(--color-texto-principal);
+            font-weight: 600;
+            font-size: 1.1rem;
+        }
+
+        .legal-logo img {
+            width: 30px;
+            height: 30px;
+            object-fit: contain;
+        }
+
+        .legal-logo span {
+            font-style: italic;
+            color: var(--color-acento);
+        }
+
+        .legal-back {
+            color: var(--color-acento);
+            text-decoration: none;
+            font-size: 0.9rem;
+            font-weight: 500;
+            transition: color 0.2s ease;
+        }
+
+        .legal-back:hover {
+            color: var(--color-acento-hover);
+        }
+
+        /* ========== CONTENEDOR PRINCIPAL ========== */
+        .legal-container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 3rem 1.5rem 4rem;
+        }
+
+        /* ========== CABECERA DEL DOCUMENTO ========== */
+        .legal-doc-header {
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+
+        .legal-doc-header h1 {
+            font-family: var(--font-serif);
+            font-size: 2.2rem;
+            font-weight: 700;
+            color: var(--color-texto-principal);
+            margin-bottom: 1rem;
+        }
+
+        .legal-doc-header .intro {
+            color: var(--color-texto-secundario);
+            max-width: 600px;
+            margin: 0 auto 0.8rem;
+            line-height: 1.8;
+            font-size: 1rem;
+        }
+
+        .legal-doc-header .last-update {
+            font-size: 0.85rem;
+            color: var(--color-texto-secundario);
+        }
+
+        .legal-divider {
+            border: none;
+            height: 1px;
+            background-color: var(--color-gris-claro);
+            margin: 0 0 2.5rem;
+        }
+
+        /* ========== CUERPO DEL DOCUMENTO ========== */
+        .legal-body {
+            display: grid;
+            grid-template-columns: 200px 1fr;
+            gap: 2rem;
+        }
+
+        /* Índice lateral */
+        .legal-index {
+            position: sticky;
+            top: 100px;
+            align-self: start;
+        }
+
+        .legal-index h3 {
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            color: var(--color-texto-secundario);
+            margin-bottom: 0.8rem;
+            font-weight: 600;
+        }
+
+        .legal-index ul {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+        }
+
+        .legal-index a {
+            color: var(--color-texto-secundario);
+            text-decoration: none;
+            font-size: 0.85rem;
+            transition: color 0.2s ease;
+        }
+
+        .legal-index a:hover {
+            color: var(--color-acento);
+        }
+
+        /* Contenido principal */
+        .legal-content h2 {
+            font-size: 1.4rem;
+            font-weight: 700;
+            color: var(--color-texto-principal);
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .legal-content h2 .icon {
+            color: var(--color-acento);
+            font-size: 1.2rem;
+        }
+
+        .legal-content p {
+            color: var(--color-texto-secundario);
+            margin-bottom: 1rem;
+            line-height: 1.8;
+        }
+
+        .legal-content strong {
+            color: var(--color-texto-principal);
+            font-weight: 600;
+        }
+
+        /* Píldoras */
+        .tag-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            margin: 0.5rem 0 1.2rem;
+        }
+
+        .tag {
+            background-color: var(--color-fondo-pildora);
+            color: var(--color-texto-principal);
+            padding: 0.3rem 0.9rem;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: 500;
+        }
+
+        /* Bloque de datos */
+        .data-block {
+            background-color: var(--color-blanco);
+            border-radius: var(--border-radius-lg);
+            padding: 1.5rem 2rem;
+            margin-bottom: 1.5rem;
+            box-shadow: var(--shadow-sm);
+            border: 1px solid var(--color-gris-claro);
+        }
+
+        .data-block p {
+            margin-bottom: 0.3rem;
+        }
+
+        /* ========== FOOTER SIMPLE ========== */
+        .legal-footer {
+            text-align: center;
+            padding: 2rem 1.5rem;
+            border-top: 1px solid var(--color-gris-claro);
+            color: var(--color-texto-secundario);
+            font-size: 0.85rem;
+            background-color: var(--color-blanco);
+        }
+
+        .legal-footer a {
+            color: var(--color-acento);
+            text-decoration: none;
+        }
+
+        .legal-footer a:hover {
+            color: var(--color-acento-hover);
+        }
+
+        /* ========== RESPONSIVE ========== */
+        @media (max-width: 700px) {
+            .legal-body {
+                grid-template-columns: 1fr;
+            }
+            
+            .legal-index {
+                position: static;
+                order: -1;
+                margin-bottom: 1.5rem;
+                background-color: var(--color-fondo-pildora);
+                border-radius: var(--border-radius-lg);
+                padding: 1rem 1.2rem;
+            }
+            
+            .legal-index ul {
+                flex-direction: row;
+                flex-wrap: wrap;
+                gap: 0.8rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- ========== HEADER ========== -->
+    <header class="legal-header">
+        <div class="legal-header-inner">
+            <a href="index.html" class="legal-logo">
+                <img src="assets/images/logo.png" alt="Logo Neuropsycare">
+                Neuropsy<span>care</span>
+            </a>
+            <a href="index.html" class="legal-back">← Volver</a>
+        </div>
+    </header>
+
+    <!-- ========== DOCUMENTO ========== -->
+    <main class="legal-container">
+        <!-- Cabecera -->
+        <div class="legal-doc-header">
+            <h1>Aviso Legal</h1>
+            <p class="intro">
+                En cumplimiento del artículo 10 de la Ley 34/2002, de 11 de julio, de Servicios de la Sociedad de la Información y Comercio Electrónico (LSSI-CE), se exponen a continuación los datos identificativos del titular de este sitio web.
+            </p>
+            <p class="last-update">Última revisión: Septiembre 2026</p>
+        </div>
+
+        <hr class="legal-divider">
+
+        <!-- Cuerpo -->
+        <div class="legal-body">
+            <!-- Índice -->
+            <nav class="legal-index" aria-label="Índice del documento">
+                <h3>Contenido</h3>
+                <ul>
+                    <li><a href="#datos-titular">1. Datos del titular</a></li>
+                    <li><a href="#objeto">2. Objeto y aceptación</a></li>
+                    <li><a href="#condiciones">3. Condiciones de uso</a></li>
+                    <li><a href="#responsabilidad">4. Exclusión de responsabilidad</a></li>
+                    <li><a href="#legislacion">5. Legislación aplicable</a></li>
+                </ul>
+            </nav>
+
+            <!-- Contenido -->
+            <div class="legal-content">
+                <!-- 1. Datos del titular -->
+                <section id="datos-titular">
+                    <h2><span class="icon">▸</span> Datos del titular</h2>
+                    <div class="data-block">
+                        <p><strong>Titular:</strong> Corina Cristina Munteanu</p>
+                        <p><strong>N.I.E.:</strong> X9888836-D</p>
+                        <p><strong>Domicilio:</strong> Provincia de Castellón, España</p>
+                        <p><strong>Correo electrónico de contacto:</strong> corina.munteanu173@gmail.com</p>
+                    </div>
+                </section>
+
+                <!-- 2. Objeto y aceptación -->
+                <section id="objeto">
+                    <h2><span class="icon">▸</span> Objeto y aceptación</h2>
+                    <p>
+                        El presente aviso legal regula el uso del sitio web que el titular pone a disposición de los usuarios de internet. El acceso y/o uso del sitio web atribuye la condición de usuario, lo que implica la aceptación plena y sin reservas de todas y cada una de las disposiciones incluidas en este documento en el momento mismo en que el usuario acceda a la web.
+                    </p>
+                </section>
+
+                <!-- 3. Condiciones de uso -->
+                <section id="condiciones">
+                    <h2><span class="icon">▸</span> Condiciones de uso y propiedad intelectual</h2>
+                    <p><strong>Uso correcto:</strong> El usuario se compromete a hacer un uso adecuado de los contenidos de la web, de conformidad con la ley, la moral, el orden público y el presente Aviso Legal.</p>
+                    <p><strong>Derechos de autor:</strong> Todos los contenidos de este blog (textos, imágenes, gráficos, diseño de código y estructura) son propiedad intelectual de Corina Cristina Munteanu o de terceros que han autorizado su uso.</p>
+                    <p><strong>Prohibiciones:</strong> Queda expresamente prohibida la reproducción, distribución o modificación pública total o parcial de los contenidos de esta web sin la autorización previa y por escrito de su titular.</p>
+                    <div class="tag-list">
+                        <span class="tag">Uso correcto</span>
+                        <span class="tag">Derechos de autor</span>
+                        <span class="tag">Prohibiciones</span>
+                    </div>
+                </section>
+
+                <!-- 4. Exclusión de responsabilidad -->
+                <section id="responsabilidad">
+                    <h2><span class="icon">▸</span> Exclusión de responsabilidad</h2>
+                    <p><strong>Contenidos:</strong> El titular se esfuerza por mantener la información de la web actualizada y correcta. No obstante, no se garantiza la total ausencia de errores ni que el contenido esté permanentemente actualizado.</p>
+                    <p><strong>Enlaces externos (Links):</strong> Este sitio web puede contener enlaces a páginas de terceros. El titular no ejerce ningún control sobre dichos sitios ni se hace responsable de sus contenidos, disponibilidad técnica, ni de los daños que puedan derivarse de su acceso.</p>
+                    <p><strong>Fallos técnicos:</strong> El titular no se hace responsable de los daños o perjuicios de cualquier naturaleza que puedan causar errores u omisiones en los contenidos, falta de disponibilidad del portal o la transmisión de virus o programas maliciosos, a pesar de haber adoptado las medidas tecnológicas necesarias para evitarlo.</p>
+                </section>
+
+                <!-- 5. Legislación aplicable -->
+                <section id="legislacion">
+                    <h2><span class="icon">▸</span> Legislación aplicable y jurisdicción</h2>
+                    <p>
+                        Para la resolución de todas las controversias o cuestiones relacionadas con el presente sitio web o de las actividades en él desarrolladas, será de aplicación la legislación española, a la que se someten expresamente las partes, siendo competentes para la resolución de todos los conflictos derivados o relacionados con su uso los Juzgados y Tribunales correspondientes al domicilio del titular o del usuario según determine la normativa procesal vigente.
+                    </p>
+                </section>
+            </div>
+        </div>
+    </main>
+
+    <!-- ========== FOOTER ========== -->
+    <footer class="legal-footer">
+        <p>&copy; 2026 Neuropsycare · <a href="index.html">Volver al inicio</a></p>
+    </footer>
+</body>
+</html>
