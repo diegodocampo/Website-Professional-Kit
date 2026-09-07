@@ -346,8 +346,8 @@ async function initArticlePage() {
         `;
     }
     
-    // Imagen interior (innerImage)
-    const imageEl = document.getElementById('article-hero-image');
+    // Imagen interior (innerImage) - AHORA EN LA NUEVA UBICACIÓN STICKY
+    const imageEl = document.getElementById('article-image-sticky');
     if (imageEl) {
         if (article.innerImage) {
             imageEl.innerHTML = `<img src="${article.innerImage}" alt="Imagen de la publicación">`;
