@@ -2303,12 +2303,12 @@ strong {
     display: inline-flex !important;
     align-items: center !important;
     gap: 0.4rem !important;
-    background-color: #555555 !important;
+    background-color: #444444 !important;
     color: #FFFFFF !important;
     font-family: var(--font-sans) !important;
     font-weight: 400 !important;
     font-size: 0.75rem !important;
-    padding: 0.15rem 0.45rem !important;
+    padding: 0.12rem 0.40rem !important;
     border-radius: 3px !important;
     text-decoration: none !important;
     transition: background-color var(--transition-fast) !important;
@@ -2318,7 +2318,7 @@ strong {
 }
 
 .legal-badge:hover {
-    background-color: rgba(0, 0, 0, 0.4) !important;
+    background-color: #333333 !important;
     color: #FFFFFF !important;
     outline: 1.5px solid #000000 !important;
 }
