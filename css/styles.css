@@ -2303,7 +2303,7 @@ strong {
     display: inline-flex !important;
     align-items: center !important;
     gap: 0.4rem !important;
-    background-color: rgba(128, 128, 128, 0.25) !important;
+    background-color: #555555 !important;
     color: #FFFFFF !important;
     font-family: var(--font-sans) !important;
     font-weight: 400 !important;
