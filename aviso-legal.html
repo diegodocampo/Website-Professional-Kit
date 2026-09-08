@@ -13,10 +13,10 @@
     <!-- Favicon -->
     <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🧠</text></svg>">
     
-    <!-- Fuentes: Inter -->
+    <!-- Fuentes: Playfair Display + Inter -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600;14..32,700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600;14..32,700&family=Playfair+Display:ital,wght@0,600;0,700;1,600&display=swap" rel="stylesheet">
     
     <style>
         /* ========== RESET ========== */
@@ -53,20 +53,28 @@
         .legal-logo {
             display: flex;
             align-items: center;
-            gap: 0.5rem;
+            gap: 0.75rem;
             text-decoration: none;
             color: #2D3748;
-            font-weight: 600;
-            font-size: 1.1rem;
+            font-weight: 700;
+            font-size: 1.5rem;
+            font-family: 'Playfair Display', Georgia, serif;
+            letter-spacing: -0.02em;
         }
 
         .legal-logo img {
-            width: 30px;
-            height: 30px;
+            width: 75px;
+            height: 75px;
             object-fit: contain;
+            flex-shrink: 0;
         }
 
-        .legal-logo span {
+        .legal-logo-text {
+            display: inline;
+            white-space: nowrap;
+        }
+
+        .legal-logo-text span {
             font-style: italic;
             color: #319795;
         }
@@ -276,6 +284,15 @@
                 flex-direction: column;
                 align-items: center;
             }
+            
+            .legal-logo {
+                font-size: 1.2rem;
+            }
+            
+            .legal-logo img {
+                width: 50px;
+                height: 50px;
+            }
         }
     </style>
 </head>
@@ -285,7 +302,7 @@
         <div class="legal-header-inner">
             <a href="index.html" class="legal-logo">
                 <img src="assets/images/logo.png" alt="Logo Neuropsycare">
-                Neuropsy<span>care</span>
+                <span class="legal-logo-text">Neuropsy<span>care</span></span>
             </a>
             <a href="index.html" class="legal-back">← Volver</a>
         </div>
