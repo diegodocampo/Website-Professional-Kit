@@ -19,19 +19,25 @@
     ]
 },
     {
-        "id": 2,
-        "title": "Título del segundo artículo",
-        "author": "Corina C. Munteanu",
-        "category": "neurociencias",
-        "date": "2026-09-05",
-        "readTime": "7 min",
-        "imageUrl": "https://ejemplo.com/imagen-portada-2.jpg",
-        "innerImage": "https://ejemplo.com/imagen-publicacion-2.jpg",
-        "excerpt": "Extracto del segundo artículo.",
-        "content": "Contenido completo del segundo artículo.\n\nSeparado en párrafos.",
-        "bibliography": "Referencia 1\nReferencia 2",
-        "tags": ["neurociencias", "investigación"]
-    },
+    "id": 1788890457160,
+    "title": "Cerebro y vacaciones",
+    "author": "Corina C. Munteanu",
+    "category": "neuropsicologia",
+    "date": "2026-09-08",
+    "readTime": "5 min",
+    "imageUrl": "https://neuropsycare.github.io/assets/images/cerebro.vacaciones.png",
+    "innerImage": "https://neuropsycare.github.io/assets/images/cerebro.vacaciones.png",
+    "excerpt": "Terminan las vacaciones y volvemos a la rutina, nos cuesta engancharnos a nuestras obligaciones. ¿Qué ocurre en nuestro cerebro? Descúbrelo!",
+    "content": "Empieza el mes de septiembre. Se acabaron las vacaciones, hay que preparar la vuelta al colegio y al trabajo. El verano pasa muy rápido y casi nos olvidamos de que tenemos una rutina a la que “reengancharnos”. Los primeros días se hacen muy duros: madrugar, volver al *multitasking*, reuniones, fechas de entrega…Sentimos mucho cansancio físico, pero, sobre todo, mental. \n\nEn el ámbito laboral, debemos emplear una gran variedad de capacidades y habilidades cognitivas. Debemos planificar, acordarnos de información para emplearla de forma inmediata (memoria operativa) o a corto plazo, mantener la atención e incluso dividirla en varias tareas al mismo tiempo. En general la jornada laboral supone un gasto energético estresante para el cerebro. Por ello las vacaciones, implican un cambio en las demandas cognitivas y la vuelta a la rutina no suena muy alentadora. \n\nEl eje hipotálamo-hipófisis-adrenal, encargado de regular la producción de cortisol en respuesta a estímulos estresantes está hiperactivo en estas situaciones. Cuando estamos de vacaciones, pero en especial, cuando somos capaces de desconectar psicológicamente del trabajo, los niveles de cortisol disminuyen y se percibe un mayor bienestar.\n\nEs imprescindible destacar que el factor beneficiosos de las vacaciones en el cerebro depende significativamente del tipo de actividades y hábitos que tengamos en este tiempo libre de trabajo. Es normal que los horarios de sueño o hábitos alimenticios se desbaraten durante este período, pero también pueden alterar esos patrones de cortisol y hacer más complicada la vuelta a la rutina. El uso de pantallas antes de dormir puede atenuar el efecto de la melatonina produciendo alteraciones en el sueño en jóvenes adultos (Höhn et al., 2024) y dejar de realizar ejercicio físico también priva de los beneficios cognitivos del deporte.\n\nEstudios de neuroimagen muestran que el contacto con la naturaleza modula de forma positiva las redes neuronales, la cognición y la regulación emocional. En un ensayo clínico aleatorizado de McDonnell y Strayer (2024) se observan mejoras en el control ejecutivo y la atención en pruebas realizadas tras una caminata de cuarenta minutos en un entorno natural. Algunos autores proponen que la capacidad de concentración y atención se restaura con la exposición a ambientes naturales (*Attention Restoration Theory* (ART)) pero la evidencia científica es variada e inconsistente. \n\nDurante las vacaciones no significa que tengamos el cerebro “apagado”. Este nos permite disminuir el cortisol, seguir aprendiendo y tomar decisiones de formas distintas produciendo un cambio en la intensidad de las demandas que le exigimos. Teniendo esto en cuenta, los beneficios de las vacaciones no duran para siempre y la reincorporación al puesto de trabajo nos obliga a retomar las exigencias cognitivas, a tomar decisiones, a inhibir conductas y a poner en marcha la atención sostenida, además de sincronizar el sueño, el hambre y otras necesidades con nuestra nueva rutina. \n\nEso sí, según la evidencia, nuestras vacaciones nos permiten recuperar recursos, desconectar y volver con energía si estamos en contacto con la naturaleza, mantenemos una buena higiene del sueño, nos movemos y desconectamos de las preocupaciones. Pequeñas acciones que podemos realizar durante el año sin tener que esperar a las próximas vacaciones.",
+    "bibliography": "1. Baquedano, C., Olguí, A., Contreras-Huerta, L. S., Rosas, F. E., & Estarellas, M. (2026). Your brain on nature: A scoping review of the neuroscience of nature exposure. *Neuroscience & Biobehavioral Reviews, 183*, 106565. https://doi.org/10.1016/j.neubiorev.2026.106565\n\n2. Berman, M. G., Jonides, J., & Kaplan, S. (2008). The cognitive benefits of interacting with nature. *Psychological Science, 19*(12), 1207–1212. https://doi.org/10.1111/j.1467-9280.2008.02225.x\n\n3. De Bloom, J., Geurts, S. A. E., & Kompier, M. A. J. (2009). Do we recover from vacation? Meta-analysis of vacation effects on health and well-being. *Journal of Occupational Health, 51*(1), 13–25.\n\n4. McDonnell, A. S., & Strayer, D. L. (2024). Immersion in nature enhances neural indices of executive attention. *Scientific Reports, 14*(1), 1845. https://doi.org/10.1038/s41598-024-52205-1\n\n5. Ohly, H., White, M. P., Wheeler, B. W., Bethel, A., Ukoumunne, O. C., Nikolaou, V., & Garside, R. (2016). Attention Restoration Theory: A systematic review of the attention restoration potential of exposure to natural environments. *Journal of Toxicology and Environmental Health, Part B, 19*(7), 305–343. https://doi.org/10.1080/10937404.2016.1196155\n\n6. Sonnentag, S., Venz, L., & Casper, A. (2017). Advances in recovery research: What have we learned? What should be done next? *Journal of Occupational Health Psychology, 22*(3), 365–380. https://doi.org/10.1037/ocp0000079",
+    "tags": [
+        "neuropsicología",
+        "cerebro",
+        "rutina",
+        "naturaleza",
+        "descanso"
+    ]
+},
     {
         "id": 3,
         "title": "Título del tercer artículo",
