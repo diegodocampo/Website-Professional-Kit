@@ -185,8 +185,8 @@ function updateDivulgacionCount() {
 function createBlogCard(article) {
     // Mostrar imagen de portada (imageUrl)
     const imageHtml = article.imageUrl 
-        ? `<img src="${article.imageUrl}" alt="Imagen de portada del artículo">` 
-        : '';
+    ? `<a href="articulo.html?id=${article.id}" aria-label="Leer artículo: ${article.title}"><img src="${article.imageUrl}" alt="Imagen de portada del artículo"></a>` 
+    : '';
 
     return `
         <article class="blog-card">
