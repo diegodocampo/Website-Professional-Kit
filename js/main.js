@@ -79,6 +79,13 @@ function initFaqAccordion() {
     });
 }
 
+/* ========== CONVERSIÓN DE CURSIVA ========== */
+function convertItalic(text) {
+    if (!text) return '';
+    // Convierte *texto* a <em>texto</em>
+    return text.replace(/\*(.+?)\*/g, '<em>$1</em>');
+}
+
 /* ========== CARGA DE PUBLICACIONES DESDE JSON ========== */
 let publicationsData = [];
 
@@ -176,10 +183,15 @@ function updateDivulgacionCount() {
 }
 
 function createBlogCard(article) {
+    // Mostrar imagen de portada (imageUrl)
+    const imageHtml = article.imageUrl 
+        ? `<img src="${article.imageUrl}" alt="Imagen de portada del artículo">` 
+        : '';
+
     return `
         <article class="blog-card">
             <div class="blog-card-image" aria-hidden="true">
-                <span class="blog-card-initial">${article.title.charAt(0)}</span>
+                ${imageHtml}
                 <span class="blog-card-category">${getCategoryLabel(article.category)}</span>
             </div>
             <div class="blog-card-content">
@@ -191,7 +203,7 @@ function createBlogCard(article) {
                 <h3 class="blog-card-title">
                     <a href="articulo.html?id=${article.id}">${article.title}</a>
                 </h3>
-                <p class="blog-card-excerpt">${article.excerpt}</p>
+                <p class="blog-card-excerpt">${convertItalic(article.excerpt)}</p>
                 <div class="blog-card-tags">
                     ${(article.tags || []).map(tag => `<span>${tag}</span>`).join('')}
                 </div>
@@ -346,7 +358,7 @@ async function initArticlePage() {
         `;
     }
     
-    // Imagen interior (innerImage) - AHORA EN LA NUEVA UBICACIÓN STICKY
+    // Imagen interior (innerImage)
     const imageEl = document.getElementById('article-image-sticky');
     if (imageEl) {
         if (article.innerImage) {
@@ -358,13 +370,14 @@ async function initArticlePage() {
         }
     }
     
-    // Contenido
+    // Contenido (con conversión de cursiva)
     const contentEl = document.getElementById('article-content');
     if (contentEl) {
         if (article.content) {
-            contentEl.innerHTML = article.content.split('\n\n').map(paragraph => `<p>${paragraph}</p>`).join('');
+            const paragraphs = article.content.split('\n\n');
+            contentEl.innerHTML = paragraphs.map(paragraph => `<p>${convertItalic(paragraph)}</p>`).join('');
         } else {
-            contentEl.innerHTML = `<p>${article.excerpt}</p>`;
+            contentEl.innerHTML = `<p>${convertItalic(article.excerpt)}</p>`;
         }
     }
     
@@ -374,11 +387,11 @@ async function initArticlePage() {
         authorEl.innerHTML = `<cite>${article.author || 'Corina C. Munteanu'}</cite>`;
     }
     
-    // Bibliografía
+    // Bibliografía (con conversión de cursiva)
     const bibliographyEl = document.getElementById('bibliography-content');
     if (bibliographyEl) {
         if (article.bibliography) {
-            bibliographyEl.textContent = article.bibliography;
+            bibliographyEl.innerHTML = convertItalic(article.bibliography).replace(/\n/g, '<br>');
         } else {
             bibliographyEl.textContent = 'No hay bibliografía disponible.';
         }
