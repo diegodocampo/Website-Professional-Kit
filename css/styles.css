@@ -2397,19 +2397,34 @@ strong {
         position: fixed;
         top: 0;
         right: 0;
-        bottom: 0;
         width: 280px;
+        height: 100vh;
+        height: 100dvh;
         background-color: var(--color-blanco);
         flex-direction: column;
+        align-items: stretch;
+        justify-content: flex-start;
         padding: 5rem var(--spacing-xl) var(--spacing-xl);
-        gap: var(--spacing-sm);
+        gap: 0;
         box-shadow: var(--shadow-xl);
         z-index: 100;
         overflow-y: auto;
+        list-style: none;
     }
     
     .nav-list.nav-open {
         display: flex;
+    }
+    
+    .nav-list li {
+        width: 100%;
+        display: block;
+    }
+    
+    .nav-list li a.nav-link {
+        display: block;
+        width: 100%;
+        padding: 0.8rem 1rem;
     }
     
     .hero-grid {
