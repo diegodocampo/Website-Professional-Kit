@@ -59,9 +59,8 @@
         "emociones",
         "neurociencia"
     ]
-} 
-]
-{
+},
+    {
     "id": 1789055503381,
     "title": "Porqué *sí* es suficiente: hablando de logros",
     "author": "Corina C. Munteanu",
@@ -81,3 +80,4 @@
         "reflexión"
     ]
 }
+]
