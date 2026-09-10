@@ -45,8 +45,8 @@
     "category": "recomendaciones",
     "date": "2026-09-10",
     "readTime": "3 min",
-    "imageUrl": "https://github.com/neuropsycare/neuropsycare.github.io/blob/main/assets/images/dime.como.te.sientes.png",
-    "innerImage": "https://github.com/neuropsycare/neuropsycare.github.io/blob/main/assets/images/dime.como.te.sientes.png",
+    "imageUrl": "https://neuropsycare.github.io/assets/images/dime.como.te.sientes.png",
+    "innerImage": "https://github.com/neuropsycare.github.io/assets/images/dime.como.te.sientes.png",
     "excerpt": "Una mirada desde la neurocirugía a las emociones, el lenguaje y la complejidad del cerebro.",
     "content": "El mundo de los científicos siempre parece muy lejano y muy distinto a la cotidianidad. No nos paramos a pensar que gracias a la investigación, a los avances podemos conducir, cultivar y operarnos. La ciencia nos dota de más facilidades, más capacidades, más años de vida. No nos damos cuenta porque lo que dicen los científicos suena encriptado y lejano. \nPor eso valoro la calidez y cercanía con la que está escrito *Dime qué sientes* del Dr. Jesús Martín-Fernández.  Nos abre las puertas del quirófano y nos invita a ver y entender sus procedimientos, y sobre todo, a entender las neurocirugías y el cerebro desde la visión de un neurocirujano. De un neurocientífico. \n\n*Dime qué sientes* es un diario personal y profesional que te permite transportarte a la presión del quirófano, a las decisiones, a las historias de los pacientes y a la alegría de que todo salga bien. Este libro propone un equilibrio necesario entre la ciencia y la humanidad, con la intención de dar importancia y preservar la esfera emocional del paciente y su individualidad. \n\nEl marco conceptual propuesto por el Dr. Martín-Fernández sobre el cerebro como un meta-sistema de cinco dimensiones, haciendo énfasis en la neuroplasticidad y la unicidad de cada cerebro permite una visión novedosa del funcionamiento de este órgano. Nos permite cuestionarnos el *localizacionismo* clásico de Broca y Wernicke, acercarnos a la conectómica y las redes neuronales como punto de partida para la investigación en neurociencias.  \n\n*Dime qué sientes* te hace partícipe de la experiencia de una neurocirugía con paciente despierto, recalcando el papel fundamental de la neuropsicología en este contexto. Este libro es ideal si te interesa la neurología, psicología, neurociencia o simplemente conocer qué ocurre en un quirófano.\n\nPersonalmente, me ha atrapado, motivado como futura neuropsicóloga y me ha confirmado lo maravillosos que son los misterios del cerebro y lo fascinante que es investigar para ayudar.\n\nCAPÍTULOS FAVORITOS: \n*Capítulo 3.* Identificar en vivo los cinco idiomas de una paciente políglota\n*Capítulo 4.* ¿Existe algo más grande que hacer música?",
     "bibliography": "Martín-Fernández, J. (2024). Dime qué sientes: Diario de un neurocirujano. Pacientes despiertos, las 5 dimensiones del cerebro y un cambio de paradigma. Ediciones Paidós.",
@@ -60,18 +60,6 @@
         "neurociencia"
     ]
 },
-    {
-        "id": 4,
-        "title": "Título del cuarto artículo",
-        "author": "Corina C. Munteanu",
-        "category": "recomendaciones",
-        "date": "2026-09-03",
-        "readTime": "6 min",
-        "imageUrl": "https://ejemplo.com/imagen-portada-4.jpg",
-        "innerImage": "https://ejemplo.com/imagen-publicacion-4.jpg",
-        "excerpt": "Extracto del cuarto artículo.",
-        "content": "Contenido completo del cuarto artículo.\n\nCon párrafos separados.",
-        "bibliography": "Referencia 1",
-        "tags": ["recomendaciones", "libros", "recursos"]
+    {PEGAR AQUÍ SIGUIENTE ARTÍCULO
     }
 ]
