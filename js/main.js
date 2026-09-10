@@ -387,13 +387,16 @@ async function initArticlePage() {
         authorEl.innerHTML = `<cite>${article.author || 'Corina C. Munteanu'}</cite>`;
     }
     
-    // Bibliografía (con conversión de cursiva)
+    // Bibliografía (con conversión de cursiva (solo si existe))
+        // Bibliografía (solo si existe)
     const bibliographyEl = document.getElementById('bibliography-content');
-    if (bibliographyEl) {
-        if (article.bibliography) {
+    const bibliographySection = document.getElementById('article-bibliography');
+    if (bibliographyEl && bibliographySection) {
+        if (article.bibliography && article.bibliography.trim()) {
             bibliographyEl.innerHTML = convertItalic(article.bibliography).replace(/\n/g, '<br>');
+            bibliographySection.style.display = '';
         } else {
-            bibliographyEl.textContent = 'No hay bibliografía disponible.';
+            bibliographySection.style.display = 'none';
         }
     }
     
